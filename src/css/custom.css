@@ -8,6 +8,7 @@
   --grey: #b4b4b4;
   --light-grey: #d9d9d9;
   --lightest-grey: #ebebeb;
+  --header-grey: rgb(227, 227, 227, 0.8);
 
   --yellow: #ffd998;
   --light-yellow: #ffe8b6;
@@ -27,8 +28,10 @@
   --p: 20px;
   --button: 20px;
 
+  --title-weight: 600;
+
   @font-face {
-    font-family: Raleway;
-    src: url(../fonts/Raleway-VariableFont_wght.ttf);
+    font-family: raleway;
+    src: url(../public/fonts/Raleway-VariableFont_wght.ttf);
   }
 }

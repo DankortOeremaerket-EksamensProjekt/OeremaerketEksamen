@@ -8,7 +8,7 @@ import "src/components/Buttons_navigation.astro";
 --- -->
 
 
-
+<layout>
 
 
 <img src="src/img/hero_detail.webp" alt="" class="hero-img">
@@ -45,8 +45,12 @@ import "src/components/Buttons_navigation.astro";
 </div> 
 
 
+</layout>
 
-<!-- CSS MOBILE -->
+
+
+
+/* CSS MOBILE */
 <style>
 
 * {
@@ -60,7 +64,7 @@ grid-template-columns: 1fr;
 
 
 
-<!-- CSS DESKTOP -->
+/* CSS DESKTOP */
 
 @media (min-width: 1024px) { 
 
@@ -71,7 +75,7 @@ grid-template-columns: 1fr;
 
     }
 
-    button {
+    .a {
         background-color: rgb(255, 0, 157);
     }
 

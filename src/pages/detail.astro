@@ -1,0 +1,81 @@
+<!-- ---
+import "css/custom.css"
+import "css/general.css"
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import "src/components/Buttons_navigation.astro";
+--- -->
+
+
+
+
+
+<img src="src/img/hero_detail.webp" alt="" class="hero-img">
+
+
+<p>Knap component indsaettes</p>
+
+<h1>Overskrift fetch</h1>
+<p><strong>Underoverskrift</strong></p>
+
+<p>Forenet med naturen"Lorem ipsum dolor sit amet, 
+    consectetur adipiscing elit, sed do eiusmod tempor 
+    incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+    laboris nisi ut aliquip ex ea commodo consequat. 
+    Duis aute irure dolor in reprehenderit in voluptate 
+    velit esse cillum dolore eu fugiat nulla pariatur. 
+    Excepteur sint occaecat cupidatat non proident, 
+    sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+<img src="src/img/storebaelt_klint.webp" alt="">
+
+
+<div>
+ <section class="text_boks_readmore">
+<h3>Laes mere om samarbejdet</h3>
+<p></p>
+<a href="https://naturfonden.dk/dankort/#:~:text=Dankort%20giver%20nemlig%20altid%201,bidraget%20og%20indsatsen%20for%20naturen."><button>Tag mig til Dansk Naturfond</button></a>
+ </section>
+
+
+ <img src="src/img/field_and_cows.webp" alt="">
+
+</div> 
+
+
+
+<!-- CSS MOBILE -->
+<style>
+
+* {
+display: grid;
+grid-template-columns: 1fr;
+    
+}
+
+
+
+
+
+
+<!-- CSS DESKTOP -->
+
+@media (min-width: 1024px) { 
+
+    .img {  
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+    }
+
+    button {
+        background-color: rgb(255, 0, 157);
+    }
+
+
+
+}
+</style>

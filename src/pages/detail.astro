@@ -1,85 +1,216 @@
-<!-- ---
-import "css/custom.css"
-import "css/general.css"
+---
+import custom from "../custom.css"
+import general from "../general.css"
+
+import Layout from "../layouts/Layout.astro"
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import "src/components/Buttons_navigation.astro";
---- -->
+import Buttons from "../components/Buttons_nav.astro";
+---
 
 
-<layout>
+
+<Layout>
 
 
-<img src="src/img/hero_detail.webp" alt="" class="hero-img">
+    <Header />
+
+<main>
+
+<img src="/src/img/hero_detail.webp" alt="" class="hero-img">
 
 
-<p>Knap component indsaettes</p>
+<Buttons />
 
-<h1>Overskrift fetch</h1>
-<p><strong>Underoverskrift</strong></p>
+<div class="layout_content">
 
-<p>Forenet med naturen"Lorem ipsum dolor sit amet, 
+<h1>Overskrift - FETCH NATUROMRÅDE</h1>
+<p><strong>Underoverskrift - Fetch API</strong></p>
+
+<p>Lorem ipsum dolor sit amet, 
     consectetur adipiscing elit, sed do eiusmod tempor 
     incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco 
     laboris nisi ut aliquip ex ea commodo consequat. 
     Duis aute irure dolor in reprehenderit in voluptate 
-    velit esse cillum dolore eu fugiat nulla pariatur. 
-    Excepteur sint occaecat cupidatat non proident, 
-    sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
-<img src="src/img/storebaelt_klint.webp" alt="">
+<img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img">
 
 
-<div>
- <section class="text_boks_readmore">
-<h3>Laes mere om samarbejdet</h3>
-<p></p>
+
+ <section class="CTA_samarbejdet">
+
+    <div class="CTA_text">
+<h2>Læs om samarbejdet</h2>
+<p>Dankort Øremærket sikrer hvert år mindst 10 mio. kr. til Naturfonden, 
+    hvilket giver over 830.000 m² ny, varig natur.
+Initiativet får bred opbakning, fordi det er en nem måde for alle 
+at støtte naturen, blot ved at betale med Dankort.</p>
+
 <a href="https://naturfonden.dk/dankort/#:~:text=Dankort%20giver%20nemlig%20altid%201,bidraget%20og%20indsatsen%20for%20naturen."><button>Tag mig til Dansk Naturfond</button></a>
- </section>
+
+</div>
+ 
+
+<img src="/src/img/field_and_cows.webp" alt="" class="detail_img-bottom">
+
+</section>
+
+</div>
+
+</main>
+
+<Footer />
 
 
- <img src="src/img/field_and_cows.webp" alt="">
-
-</div> 
-
-
-</layout>
+</Layout>
 
 
 
 
-/* CSS MOBILE */
+<!-- /* CSS MOBILE, DETAIL */ -->
+
 <style>
 
-* {
+
+.layout_content {
 display: grid;
 grid-template-columns: 1fr;
+align-items: center;
+width: 100%;
+max-width: 400px;
+margin: 0 auto;
     
 }
 
+.hero-img {
+    width: 100%;
+    height: auto; 
+}
+
+h1 {
+    font-size: var(--h1-mobil);
+    max-width: 350px;
+}
+
+h2 {
+    font-size: var(--h2-mobil);
+    max-width: 350px;
+}
+
+p {
+    font-size: var(--p-mobil);
+    max-width: 350px;
+
+    background-color: blue;
+}
+
+button {
+    font-size: var(--button-mobil);
+    border-radius: var(--btn_border-mobil);
+
+    padding: var(--btn_padding-mobil);
+    margin: var(--btn_margin);
+
+   /*  margin-top: 22px;
+    margin-bottom: 22px; */
+
+    background-color: blue;
+}
 
 
 
 
 
-/* CSS DESKTOP */
+
+
+/* CSS DESKTOP, DETAIL */
 
 @media (min-width: 1024px) { 
 
-    .img {  
-  width: 100%;
-  height: auto;
+.hero-img {  
+  width: 95%;
+  height: 40%;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 
-    }
+}
 
-    .a {
-        background-color: rgb(255, 0, 157);
-    }
+.detail-img {
+    width: 70%;
+}
+
+
+.layout_content {
+align-items: center;
+width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+    
+}
+
+h1 {
+    font-size: var(--h1);
+    background-color: red;
+    
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+p {
+    font-size: var(--p);
+    background-color: red;
+    max-width: 700px;
+}
+
+/* Nederste banner-del */
+
+button {
+    font-size: var(--button);
+    border-radius: var(--btn_border);
+
+    padding: var(--btn_padding);
+    margin: var(--btn_margin);
+
+ /*  margin: 10px 0 10px 0; */
+ 
+    background-color: red;
+}
+
+
+
+  .CTA_samarbejdet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+    .CTA_text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .detail_img-bottom {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    justify-self: end; 
+  }
+
 
 
 
 }
+
 </style>

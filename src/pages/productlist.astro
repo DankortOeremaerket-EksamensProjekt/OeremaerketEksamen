@@ -1,0 +1,172 @@
+---
+import custom from "../custom.css"
+import general from "../general.css"
+
+import Layout from "../layouts/Layout.astro"
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Buttons from "../components/Buttons_nav.astro";
+
+import Map from "../components/Dk_map.astro";
+import Cards from "../components/Card_nature.astro";
+---
+
+<Layout>
+<Header />
+
+<main>
+
+     
+
+    <div class="collage-wrapper">
+    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img1">
+    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img2">
+    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img3">
+    </div>
+
+    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img_mobile">
+
+   <Buttons />
+
+
+    
+  <div class="nature-text">
+    <h1>Vi giver plads til den Danske Natur.</h1>
+    <p>Hver gang du bruger dit Dankort, 
+        donerer vi 1 øre til Den Danske Naturfond. 
+        Det bliver til mere end 10 millioner kroner hvert år, 
+        der går ubeskåret til opkøb og udvikling af mere vild 
+        og varig natur i Danmark. Vi kalder det Dankort Øremærket. 
+        Målet er ikke at forbruge mere, men at skabe mere plads 
+        til den danske natur.</p>
+  </div>
+
+ 
+    <h2>Her donerer Dankort til den danske natur</h2>
+
+    <Map />
+    <Cards />
+
+
+
+
+
+
+
+</main>
+
+
+<Footer />
+</Layout>
+
+
+
+
+
+
+<style>
+
+<!-- /* CSS MOBILE, DETAIL */ -->
+
+main {
+display: grid;
+grid-template-columns: 1fr;
+align-items: center;
+width: 100%;
+max-width: 400px;
+margin: 0 auto;    
+}
+
+
+
+.detail-img1,
+  .detail-img2,
+  .detail-img3 {
+    display: none;
+}
+
+ .detail-img1,
+  .detail-img2,
+  .detail-img3 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--btn_border-mobile);
+  }
+
+.nature-text {
+    max-width: 350px;
+}
+
+
+
+
+/* CSS DESKTOP, DETAIL */
+
+@media (min-width: 1024px) { 
+
+/* main {
+display: grid;
+grid-template-columns: 1fr;
+align-items: center;
+width: 100%;
+max-width: 400px;
+margin: 0 auto;   
+} */ 
+
+
+/* DISPLAY NONE PÅ MOBIL-OPSÆTNING */
+
+.detail-img_mobile {
+    display: none;
+}
+
+
+/* VIS BILLEDER OG COLLAGE */
+
+.detail-img2,
+.detail-img3 {
+    display: block;
+}
+
+
+
+.collage-wrapper {
+    position: relative;
+    width: 450px;
+    height: 500px; /* giver plads til overlap */
+  }
+
+  .collage-wrapper img {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .detail-img1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .detail-img2 {
+    top: 120px;
+    left: 80px;
+    z-index: 2;
+    display: block;
+  }
+
+  .detail-img3 {
+    top: 240px;
+    left: 20px;
+    z-index: 3;
+    display: block;
+  }
+
+
+}
+
+</style>

@@ -1,0 +1,149 @@
+---
+import "../css/custom.css";
+---
+
+<footer>
+  <div class="footer-info">
+    <img src="/DK_Logo_CMYK.svg" alt="Dankort" width="71" height="42" />
+    <div class="footer-links">
+      <h2>Dankort</h2>
+      <ul>
+        <li><a href="/">Om Dankort</a></li>
+        <li><a href="/">Presse</a></li>
+        <li><a href="/">Download Logoer</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h2>Support</h2>
+      <ul>
+        <li><a href="/">Kontakt salg</a></li>
+        <li><a href="/">Kontakt kundeservice</a></li>
+        <li><a href="/">Support erhverv</a></li>
+        <li><a href="/">Support privat</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h2>Politikker</h2>
+      <ul>
+        <li><a href="/">Privatlivspolitikker</a></li>
+        <li><a href="/">Cookies</a></li>
+        <li><a href="/">AEE regulativ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-nyhedsbrev">
+    <h1>Tilmeld dig vores nyhedsbrev.</h1>
+    <p>lille tekst om nyhedsbrev</p>
+    <input type="text" placeholder="Skriv din email her" />
+    <button>Tilmeld</button>
+  </div>
+</footer>
+
+<style>
+  @font-face {
+    font-family: raleway;
+    src: url(/fonts/Raleway-VariableFont_wght.ttf);
+  }
+  .footer-info h2 {
+    font-size: var(--h1-mobil);
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 24px;
+    border-radius: 25px;
+  }
+  .footer-info img {
+    margin: 1rem 0;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: var(--lightest-grey);
+    border-radius: 25px;
+    gap: 25px;
+  }
+  .footer-links {
+    text-align: left;
+  }
+  .footer-links ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .footer-links a {
+    font-size: var(--h2-mobil);
+    font-family: raleway;
+    text-decoration: none;
+    color: var(--black);
+  }
+  .footer-links li {
+    margin: 0 0 15px;
+  }
+  .footer-links li::before {
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='9' viewBox='0 0 5 9' fill='none'><path d='M1 1L4 4.5L1 8' stroke='%23E21E27' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    margin: 0 8px 0 0;
+  }
+  .footer-nyhedsbrev {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: var(--red);
+  }
+  .footer-nyhedsbrev {
+    text-align: center;
+  }
+  .footer-nyhedsbrev h1 {
+    color: var(--white);
+    font-size: var(--h1-mobil);
+  }
+  .footer-nyhedsbrev p {
+    font-size: var(--h2-mobil);
+    color: var(--white);
+  }
+  .footer-nyhedsbrev input {
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    border: solid 1px var(--dark-grey);
+    margin: 1rem;
+    font-family: raleway;
+  }
+
+  .footer-nyhedsbrev button {
+    align-self: center;
+    font-family: raleway;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 40px;
+    border-radius: 25px;
+    width: max-content;
+    margin: 1rem 0 0 0;
+    text-decoration: none;
+    display: inline-block;
+  }
+  @media (min-width: 800px) {
+    footer {
+      display: grid;
+      grid-template-columns: 3fr 1.1fr;
+      gap: 0;
+      width: 100%;
+      padding: 64px 80px;
+      box-sizing: border-box;
+    }
+
+    .footer-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: start;
+      gap: 40px;
+    }
+
+    .footer-nyhedsbrev {
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+</style>

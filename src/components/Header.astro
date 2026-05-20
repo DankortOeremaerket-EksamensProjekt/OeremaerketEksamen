@@ -1,0 +1,170 @@
+---
+import "../css/custom.css";
+---
+
+<header>
+  <div class="dk-header">
+    <div class="logo">
+      <img src="/DK_Logo_CMYK.svg" alt="Dankort" />
+    </div>
+
+    <button class="burger" id="burger" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="/">Erhverv</a></li>
+        <li><a href="/">Privat</a></li>
+        <li><a href="/">Dankort Øremærket</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const burger = document.querySelector(".burger");
+  const menu = document.querySelector(".menu");
+
+  if (burger && menu) {
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  }
+</script>
+
+<style>
+  @font-face {
+    font-family: raleway;
+    src: url(/fonts/Raleway-VariableFont_wght.ttf);
+  }
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  .dk-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    background-color: var(--header-grey);
+  }
+
+  .logo img {
+    width: 69.3px;
+    height: 41px;
+  }
+  .logo {
+    padding: 0 0 0 1.5rem;
+    height: 41px;
+  }
+
+  .burger {
+    padding: 0 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    height: 16px;
+  }
+
+  .burger span {
+    width: 14px;
+    height: 1px;
+    background-color: var(--black);
+    transition: 0.3s;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background-color: var(--header-grey);
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    padding-top: 1rem;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: var(--title-weight);
+    font-size: var(--button);
+    font-family: raleway;
+    padding: 0 2rem 0 0;
+    display: block;
+    text-align: right;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 4px);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+  @media (min-width: 800px) {
+    .dk-header {
+      max-width: 1392px;
+      height: 80px;
+      padding: 0 5rem;
+    }
+
+    .logo {
+      padding: 0 1.5rem 0 0;
+    }
+
+    .burger {
+      display: none;
+    }
+
+    .menu {
+      display: block;
+      position: static;
+      width: auto;
+      height: auto;
+      padding-top: 0;
+      background: transparent;
+      backdrop-filter: none;
+      padding: 0 0 0 2rem;
+    }
+
+    .menu ul {
+      flex-direction: row;
+    }
+
+    .menu a {
+      text-align: left;
+      font-size: var(--h1-mobile);
+    }
+  }
+</style>

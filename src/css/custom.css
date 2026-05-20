@@ -9,7 +9,6 @@
   --grey: #b4b4b4;
   --light-grey: #d9d9d9; /* Footer-farve, dots */
   --lightest-grey: #ebebeb;
-  --header-grey: rgb(227, 227, 227, 0.8);
 
   --yellow: #ffd998; /* Ikon-farve, card-color */
   --light-yellow: #ffe8b6;
@@ -25,14 +24,14 @@
   --p-mobil: 12px;
   --button-mobil: 12px;
 
-  --h1: 32px;
-  --h2: 24px;
-  --p: 16px;
+  --h1: 48px;
+  --h2: 40px;
+  --p: 20px;
   --button: 20px;
 
   /* margin og padding */
 
-  --btn_padding-mobil: 25px;
+  --btn_padding-mobil: 50px;
   --btn_padding: 50px;
 
   --btn_margin-mobile: 25px;
@@ -54,10 +53,4 @@
 html,
 body {
   font-family: "Raleway", sans-serif;
-  --title-weight: 600;
-
-  @font-face {
-    font-family: raleway;
-    src: url(../public/fonts/Raleway-VariableFont_wght.ttf);
-  }
 }

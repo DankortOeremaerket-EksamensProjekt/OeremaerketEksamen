@@ -1,22 +1,24 @@
-* {
-  /* colors */
-  --red: #e21e27;
-  --white: #ffffff;
-  --black: #1e1e1e;
-  --darkest-grey: #4a4a4a;
+/* colors */
+
+:root {
+  --red: #e21e27; /* Røde CTA'er, Dankort-banner, ikon-koncept, footer-card */
+  --white: #ffffff; /* Baggrund, Tekst-farve på rød */
+  --black: #1e1e1e; /* Tekst-farve på hvid og grå*/
+  --darkest-grey: #4a4a4a; /* Knapper   */
   --dark-grey: #6a6a6a;
   --grey: #b4b4b4;
-  --light-grey: #d9d9d9;
+  --light-grey: #d9d9d9; /* Footer-farve, dots */
   --lightest-grey: #ebebeb;
 
-  --yellow: #ffd998;
+  --yellow: #ffd998; /* Ikon-farve, card-color */
   --light-yellow: #ffe8b6;
-  --green: #81d979;
+  --green: #81d979; /* Ikon-farve */
   --light-green: #a1eaac;
-  --blue: #3bb7ea;
-  --light-blue: #90d9f8;
+  --blue: #3bb7ea; /* Ikon-farve */
+  --light-blue: #90d9f8; /* Card-step */
 
-  /* font */
+  /* font sizes */
+
   --h1-mobil: 16px;
   --h2-mobil: 14px;
   --p-mobil: 12px;
@@ -27,8 +29,28 @@
   --p: 20px;
   --button: 20px;
 
-  @font-face {
-    font-family: Raleway;
-    src: url(../fonts/Raleway-VariableFont_wght.ttf);
-  }
+  /* margin og padding */
+
+  --btn_padding-mobil: 25px;
+  --btn_padding: 50px;
+
+  --btn_margin-mobile: 25px;
+  --btn_margin: 25px;
+
+  /* border radius */
+
+  --btn_border-mobil: 25px;
+  --btn_border: 25px;
+}
+
+/* GLOBAL FONT */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
+}
+
+html,
+body {
+  font-family: "Raleway", sans-serif;
 }

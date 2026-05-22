@@ -23,11 +23,15 @@
   --h2-mobil: 14px;
   --p-mobil: 12px;
   --button-mobil: 12px;
+  --title-weight: 600;
 
   --h1: 48px;
   --h2: 40px;
   --p: 20px;
   --button: 20px;
+
+  --icons-h-desktop: 20px;
+  --icons-p-desktop: 15px;
 
   /* margin og padding */
 

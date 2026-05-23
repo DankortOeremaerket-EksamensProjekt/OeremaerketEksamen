@@ -1,11 +1,180 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import placeholder from "../img/placeholder.png";
+import skyerbred from "../img/sky_clouds.webp";
+import surfer from "../img/surfer_girl.webp";
+import Icons from "../components/Icons.astro";
+import ButtonsNav from "../components/Buttons_nav.astro";
+import "../css/custom.css";
 ---
 
 <Layout>
-	<Welcome />
+  <img src={placeholder.src} alt="" class="hero" />
+  <!-- <ButtonsNav /> -->
+  <Icons />
+  <div class="koncept_1_1">
+    <div class="koncept_tekst">
+      <h1>Vi donerer til Den Danske Naturfond</h1>
+      <p>
+        Vores koncept er helt enkelt: Brug dit Dankort, når du handler, og vi
+        donere 1 øre pr. transaktion til den Danske Naturfond.
+      </p>
+      <p>
+        Hertil donere både vores samarbejdspartnere i form af udvalgte danske
+        butikker og banker også 1 øre pr. Transaktion.
+      </p>
+      <p>
+        Dvs. Der kan blive doneret op til 3 øre for din transaktion, hver gang,
+        du handler!
+      </p>
+      <div class="koncept_button">
+        <a href="/">Se naturområder her</a>
+      </div>
+    </div>
+    <div class="koncept_billeder">
+      <img
+        src={skyerbred.src}
+        alt=""
+        class="kant_billede"
+        id="kant_landscape"
+      />
+      <img src={surfer.src} alt="" class="kant_billede" id="kant_portrait" />
+    </div>
+  </div>
 </Layout>
+
+<style>
+  @font-face {
+    font-family: raleway;
+    src: url(/fonts/Raleway-VariableFont_wght.ttf);
+  }
+  .hero {
+    width: 95%;
+    height: 30%;
+  }
+  body {
+    text-align: center;
+  }
+  img {
+    border-radius: 25px;
+  }
+  .koncept_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .koncept_tekst {
+    grid-column: 1;
+    text-align: left;
+    padding: 1.5rem 1rem 1.5rem 1.5rem;
+    font-family: raleway;
+  }
+
+  .koncept_billeder {
+    grid-column: 2;
+    position: relative;
+    width: 120px;
+    height: 230px;
+    overflow: hidden;
+  }
+
+  .koncept_tekst h1 {
+    font-size: var(--h1-mobil);
+    color: var(--black);
+    font-family: raleway;
+    font-weight: var(--title-weight);
+  }
+  .koncept_tekst p {
+    font-size: var(--p-mobil);
+    color: var(--black);
+  }
+
+  .koncept_button a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--button-mobil);
+    font-weight: var(--title-weight);
+  }
+  .kant_billede {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+  }
+
+  #kant_landscape {
+    width: 200px;
+    height: auto;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+  }
+
+  #kant_portrait {
+    width: 105px;
+    height: 145px;
+    top: 70px;
+    left: 40px;
+    z-index: 2;
+  }
+
+  .koncept_button {
+    text-align: center;
+    margin-top: 1rem;
+    width: fit-content;
+    padding: var(--btn_padding-mobil);
+    background-color: var(--red);
+    border-radius: 25px;
+  }
+
+  @media (min-width: 800px) {
+    .hero {
+      height: 90%;
+    }
+
+    .koncept_tekst h1 {
+      font-size: var(--h1);
+    }
+    .koncept_tekst p {
+      font-size: var(--p);
+    }
+
+    .koncept_1_1 {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem;
+    }
+
+    .koncept_tekst {
+      padding: 2rem 1rem 2rem 3rem;
+    }
+
+    .koncept_billeder {
+      width: 340px;
+      height: 240px;
+      overflow: visible;
+      justify-self: right;
+      padding: 0 0 0 1rem;
+      margin: 6.5rem;
+    }
+
+    #kant_landscape {
+      width: 27rem;
+      height: auto;
+      top: -50px;
+      right: 0;
+      left: auto;
+    }
+
+    #kant_portrait {
+      width: 15rem;
+      height: auto;
+      top: 60px;
+      right: -60px;
+      left: auto;
+    }
+  }
+</style>

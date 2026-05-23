@@ -9,6 +9,7 @@
   --grey: #b4b4b4;
   --light-grey: #d9d9d9; /* Footer-farve, dots */
   --lightest-grey: #ebebeb;
+  --header-grey: rgb(227, 227, 227, 0.8);
 
   --yellow: #ffd998; /* Ikon-farve, card-color */
   --light-yellow: #ffe8b6;

@@ -35,7 +35,7 @@
 
   /* margin og padding */
 
-  --btn_padding-mobil: 50px;
+  --btn_padding-mobil: 10px 20px;
   --btn_padding: 50px;
 
   --btn_margin-mobile: 25px;

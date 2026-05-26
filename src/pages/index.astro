@@ -6,18 +6,19 @@ import surfer from "../img/surfer_girl.webp";
 import Icons from "../components/Icons.astro";
 import ButtonsNav from "../components/Buttons_nav.astro";
 import "../css/custom.css";
+import Banner from "../components/Banner_red_DK.astro";
 ---
 
 <Layout>
   <img src={placeholder.src} alt="" class="hero" />
-  <!-- <ButtonsNav /> -->
+  <ButtonsNav />
   <Icons />
   <div class="koncept_1_1">
     <div class="koncept_tekst">
       <h1>Vi donerer til Den Danske Naturfond</h1>
       <p>
-        Vores koncept er helt enkelt: Brug dit Dankort, når du handler, og vi
-        donere 1 øre pr. transaktion til den Danske Naturfond.
+        Vores koncept er helt enkelt: Brug dit Dankort, når du betaler, og vi
+        donerer 1 øre pr. transaktion til den Danske Naturfond.
       </p>
       <p>
         Hertil donere både vores samarbejdspartnere i form af udvalgte danske
@@ -25,10 +26,10 @@ import "../css/custom.css";
       </p>
       <p>
         Dvs. Der kan blive doneret op til 3 øre for din transaktion, hver gang,
-        du handler!
+        du handler med Dankort!
       </p>
       <div class="koncept_button">
-        <a href="/">Se naturområder her</a>
+        <a href="/">Se støttede områder her</a>
       </div>
     </div>
     <div class="koncept_billeder">
@@ -41,6 +42,7 @@ import "../css/custom.css";
       <img src={surfer.src} alt="" class="kant_billede" id="kant_portrait" />
     </div>
   </div>
+  <Banner />
 </Layout>
 
 <style>

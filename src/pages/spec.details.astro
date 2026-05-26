@@ -9,15 +9,17 @@ import Footer from '../components/Footer.astro';
 import Buttons from "../components/Buttons_nav.astro";
 
 import Map from "../components/Dk_map.astro";
-import Cards from "../components/Card_nature.astro";
+
 ---
 
 <Layout>
-<Header />
 
 <main>
 
      
+ <Buttons />
+
+ <h1>Specifik nature area - Superbase</h1>
 
     <div class="collage-wrapper">
     <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img1">
@@ -27,12 +29,12 @@ import Cards from "../components/Card_nature.astro";
 
     <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img_mobile">
 
-   <Buttons />
+  
 
 
     
   <div class="nature-text">
-    <h1>Vi giver plads til den Danske Natur.</h1>
+    <h1>Forenet med naturen</h1>
     <p>Hver gang du bruger dit Dankort, 
         donerer vi 1 øre til Den Danske Naturfond. 
         Det bliver til mere end 10 millioner kroner hvert år, 
@@ -43,10 +45,16 @@ import Cards from "../components/Card_nature.astro";
   </div>
 
  
-    <h2>Her donerer Dankort til den danske natur</h2>
+  <div class="naturfond_link">
+    <h2>Læs mere om Den Danske Naturfonds arbejde her</h2>
+    
 
-    <Map />
-    <Cards />
+    <img src="/src/img/storebaelt_klint.webp" alt="" class="">
+     
+    <a href="https://naturfonden.dk/dankort/">Dansk Naturfond</a>
+  
+  </div>  
+    
 
 
 
@@ -57,7 +65,7 @@ import Cards from "../components/Card_nature.astro";
 </main>
 
 
-<Footer />
+
 </Layout>
 
 
@@ -98,7 +106,6 @@ margin: 0 auto;
 .nature-text {
     max-width: 350px;
 }
-
 
 
 

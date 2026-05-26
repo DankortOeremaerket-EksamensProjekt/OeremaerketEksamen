@@ -6,6 +6,9 @@ import Jumpdown from "../assets/jumpdown.svg";
 import Piggyback from "../img/girls_piggybacking.webp";
 import Smallshop from "../img/small_shop.webp";
 import Mobilsti from "../assets/sti_mobil.svg";
+import DankortIHand from "../img/dankort_i_haand.webp";
+import LogPaa from "../img/logon.webp";
+import Udfyld from "../img/udfyld_detaljer.webp";
 ---
 
 <Layout>
@@ -31,38 +34,35 @@ import Mobilsti from "../assets/sti_mobil.svg";
     <div class="step-wrapper">
       <div class="step_venstre" id="step_1">
         <div class="step_v_pic">
-          <img src={Piggyback.src} alt="" />
+          <img src={LogPaa.src} alt="" />
         </div>
         <div class="step_v_tekst">
           <h2>STEP 1</h2>
           <p>
-            Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
-            Naturfond. Det bliver til mere end 10 millioner kroner hvert år,
+            Log ind på din netbank og find frem til deres kortbestillings
+            service.
           </p>
         </div>
       </div>
       <div class="step_hoejre">
         <div class="step_h_pic" id="step_2">
-          <img src={Piggyback.src} alt="" />
+          <img src={Udfyld.src} alt="" />
         </div>
         <div class="step_h_tekst">
           <h2>STEP 2</h2>
           <p>
-            Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
-            Naturfond. Det bliver til mere end 10 millioner kroner hvert år,
+            Vælg Dankort eller Visa Dankort og udfyld de påkrævede
+            informationer.
           </p>
         </div>
       </div>
       <div class="step_venstre" id="step_3">
         <div class="step_v_pic">
-          <img src={Piggyback.src} alt="" />
+          <img src={DankortIHand.src} alt="" />
         </div>
         <div class="step_v_tekst">
           <h2>STEP 3</h2>
-          <p>
-            Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
-            Naturfond. Det bliver til mere end 10 millioner kroner hvert år,
-          </p>
+          <p>Vent på at kortet leveres i din postkasse. Så nemt er det!</p>
         </div>
       </div>
     </div>
@@ -187,6 +187,9 @@ import Mobilsti from "../assets/sti_mobil.svg";
     }
     h1 {
       font-size: var(--h1);
+    }
+    h2 {
+      font-size: var(--h2);
     }
     p {
       font-size: var(--p);

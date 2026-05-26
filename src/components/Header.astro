@@ -4,10 +4,12 @@ import "../css/custom.css";
 
 <header>
   <div class="dk-header">
-    <div class="logo">
-      <img src="/DK_Logo_CMYK.svg" alt="Dankort" />
-      <h2>ØREMÆRKET</h2>
-    </div>
+    <a href="/index"
+      ><div class="logo">
+        <img src="/DK_Logo_CMYK.svg" alt="Dankort" />
+        <h2>ØREMÆRKET</h2>
+      </div></a
+    >
 
     <button class="burger" id="burger" aria-label="Åbn menu">
       <span></span>
@@ -55,6 +57,9 @@ import "../css/custom.css";
     justify-content: space-between;
     align-items: center;
     height: 64px;
+  }
+  .dk-header a {
+    text-decoration: none;
   }
 
   .logo img {

@@ -17,7 +17,25 @@ console.log("Error:", error);
   <main>
 
     <!-- HERO BILLEDE -->
-    <img src="/src/img/hero_detail.webp" alt="" class="hero-img" />
+    <div class="hero_photos">
+      <img src="/src/img/hero_detail.webp" alt="" class="hero-img layer layer1" />
+      <img src="/src/img/hero_detail.webp" alt="" class="hero-desktop layer layer2" />
+      <img src="/src/img/hero_detail.webp" alt="" class="hero-desktop layer layer3" />
+ 
+ <div class="nature-text_desktop">
+      <h1>Vi giver plads til den Danske Natur.</h1>
+      <p>
+        Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
+        Naturfond. Det bliver til mere end 10 millioner kroner hvert år, der går
+        ubeskåret til opkøb og udvikling af mere vild og varig natur i Danmark.
+        Vi kalder det Dankort Øremærket. Målet er ikke at forbruge mere, men at
+        skabe mere plads til den danske natur.
+      </p>
+    </div>
+
+    </div>
+
+
 
     <!-- 3 KNAPPER -->
     <Buttons />
@@ -115,6 +133,7 @@ console.log("Error:", error);
   });
 </script>
 
+
 <style>
   main {
     width: 100%;
@@ -122,9 +141,13 @@ console.log("Error:", error);
     margin: 0 auto;
   }
 
-  .hero-img {
+ /*  .hero-img {
     width: 100%;
     height: auto;
+  } */
+
+  .hero-desktop {
+    display: none;
   }
 
   .nature-text {
@@ -248,16 +271,38 @@ console.log("Error:", error);
       max-width: 1200px;
     }
 
-    .hero-img {
+.hero-desktop {
+    display: block;
+  }
+
+  /*   .hero-photos {
       width: 95%;
       height: 400px;
       object-fit: cover;
       display: block;
       margin: 0 auto;
       border-radius: 16px;
-    }
+    } */
 
-    .nature-text {
+
+
+.hero-photos  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  
+}
+
+
+
+.nature-text {
+  display: none;
+}
+
+    .nature-text_desktop {
       max-width: 700px;
       margin: 2rem auto;
       padding: 0 2rem;

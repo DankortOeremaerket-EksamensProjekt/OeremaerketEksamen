@@ -1,155 +1,171 @@
 ---
-import custom from "../custom.css"
-import general from "../general.css"
+import Layout from "../layouts/Layout.astro";
 
-import Layout from "../layouts/Layout.astro"
+import "../css/custom.css";
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Buttons from "../components/Buttons_nav.astro";
-
-import Map from "../components/Dk_map.astro";
-
+import Banner from "../components/Banner_read_more.astro";
 ---
 
 <Layout>
 
 <main>
+<!--   Div til at indsætte billede-link fra Superbase af område. Billede 1 af 2 -->
+  <div>
+    <img src="/src/img/sandy_beach.webp" alt="" class="img_mobile-1"> 
+</div>
 
-     
  <Buttons />
 
- <h1>Specifik nature area - Superbase</h1>
+<!--  Julie indsætter Superbase elementer --> 
 
-    <div class="collage-wrapper">
-    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img1">
-    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img2">
-    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img3">
-    </div>
 
-    <img src="/src/img/storebaelt_klint.webp" alt="" class="detail-img_mobile">
+ <h1>Naturområde overskrift - Superbase</h1>
 
-  
-
+<section class="desktop-section">
+<!--  Collage af 2 billeder, der kun vises i desktop, indsæt img link 1 og 2-->
+  <div class="collage-wrapper">
+     <img src="/src/img/sandy_beach_coastline.webp" alt="" class="detail-img1">
+     <img src="/src/img/sandy_beach.webp" alt="" class="detail-img2">
+  </div>
 
     
   <div class="nature-text">
-    <h1>Forenet med naturen</h1>
-    <p>Hver gang du bruger dit Dankort, 
-        donerer vi 1 øre til Den Danske Naturfond. 
-        Det bliver til mere end 10 millioner kroner hvert år, 
-        der går ubeskåret til opkøb og udvikling af mere vild 
-        og varig natur i Danmark. Vi kalder det Dankort Øremærket. 
-        Målet er ikke at forbruge mere, men at skabe mere plads 
-        til den danske natur.</p>
+    <h2>Underoverskrift - Supabase</h2>
+    <p>Tekst hentes gennem API om specifikt område. 
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Consequuntur, deserunt placeat neque esse excepturi aliquid 
+      eveniet tempora temporibus quis reiciendis sunt nam. 
+      Totam excepturi sequi ullam distinctio necessitatibus dignissimos delectus.</p>
   </div>
 
- 
-  <div class="naturfond_link">
-    <h2>Læs mere om Den Danske Naturfonds arbejde her</h2>
+</section>
+
+
+  <!--   Div til at indsætte billede-link fra Superbase af område. Billede 2 af 2 -->
+  <img src="/src/img/sandy_beach_coastline.webp" alt="" class="img_mobile-2">
+
     
 
-    <img src="/src/img/storebaelt_klint.webp" alt="" class="">
-     
-    <a href="https://naturfonden.dk/dankort/">Dansk Naturfond</a>
-  
-  </div>  
-    
-
-
-
-
-
-
-
+<Banner />
 </main>
-
-
-
 </Layout>
-
-
 
 
 
 
 <style>
 
-<!-- /* CSS MOBILE, DETAIL */ -->
+/* MOBILE FIRST */ 
 
 main {
 display: grid;
 grid-template-columns: 1fr;
+
 align-items: center;
-width: 100%;
-max-width: 400px;
-margin: 0 auto;    
-}
-
-
-
-.detail-img1,
-  .detail-img2,
-  .detail-img3 {
-    display: none;
-}
-
- .detail-img1,
-  .detail-img2,
-  .detail-img3 {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: var(--btn_border-mobile);
-  }
-
-.nature-text {
-    max-width: 350px;
-}
-
-
-
-/* CSS DESKTOP, DETAIL */
-
-@media (min-width: 1024px) { 
-
-/* main {
-display: grid;
-grid-template-columns: 1fr;
-align-items: center;
-width: 100%;
-max-width: 400px;
 margin: 0 auto;   
-} */ 
+}
+
+h1 {
+  font-size: var(--h1-mobile);
+}
+
+h2 {
+  font-size: var(--h2-mobile);
+}
+
+p {
+  font-size: var(--p-mobile);
+}
+
+.collage-wrapper {
+  display: none;
+}
+
+.img_mobile-1,
+.img_mobile-2 {
+  display: block;
+ 
+  margin: 0 auto;
+}
+
+.nature-text,
+h1 {
+   display: block;
+
+   max-width: 350px;
+   margin: 0 auto;
+   padding: 25px;
+}
+
+
+
+
+  /* DESKTOP 1024PX*/
+
+  @media (min-width: 1024px) {
+    main {
+      max-width: 1200px;
+    }
+
+h1 {
+  font-size: var(--h1);
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+p {
+  font-size: var(--p);
+}
+
+
+.desktop-section {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+
+
+
 
 
 /* DISPLAY NONE PÅ MOBIL-OPSÆTNING */
 
-.detail-img_mobile {
+.img_mobile-1,
+.img_mobile-2 {
     display: none;
 }
 
 
-/* VIS BILLEDER OG COLLAGE */
-
-.detail-img2,
-.detail-img3 {
-    display: block;
-}
-
+/* VIS BILLEDER I COLLAGE */
 
 
 .collage-wrapper {
+  display: block;
+}
+
+.collage-wrapper {
     position: relative;
+
     width: 450px;
     height: 500px; /* giver plads til overlap */
   }
 
   .collage-wrapper img {
     position: absolute;
-    width: 70%;
+
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+
+    border-radius: var(--img_border);
     object-fit: cover;
   }
 

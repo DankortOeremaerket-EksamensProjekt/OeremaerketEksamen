@@ -1,22 +1,20 @@
 ---
 import "../css/custom.css";
-import Layout from "../layouts/Layout.astro";
 ---
 
 
-<Layout>
+
   
  <div class="banner_readmore">
 
   <div class="tekst_box_left">
 
-<h2>Læs mere om samarbejdet her  </h2>
+<h2>Læs mere om samarbejdet her</h2>
 <p>Dankort Øremærket blev lanceret i 2021 som en ordning, 
   hvor der automatisk doneres 1 øre til Den Danske Naturfond, 
   hver gang du betaler med dit Dankort. 
   Initiativet blev skabt for at støtte vild, dansk natur 
   og sikre store, beskyttede naturområder i Danmark...</p>
-
 <a href="https://naturfonden.dk/dankort/">Tag mig til Naturfonden</a>
 
   </div>
@@ -25,10 +23,11 @@ import Layout from "../layouts/Layout.astro";
 
 </div>
 
-</Layout>
 
 
 <style>
+
+
   /* MOBILE FIRST */
 
     h2 {
@@ -42,37 +41,43 @@ import Layout from "../layouts/Layout.astro";
     .banner_readmore {
       display: flex;
       flex-direction: column;
+
       align-items: center; 
       gap: 20px;
+
       padding: 10px;
-
-     
       margin: 0 auto;
-
     }
 
 
     a {
+      display: flex;              
+      justify-content: center;    
+      align-items: center;  
+
+      max-width: 150px;
+
       text-decoration: none;
       font-size: var(--button-mobile);
+      max-width: 100%; 
 
       color: var(--white);
       background-color: var(--red);
 
       padding: var(--btn_padding-mobile);
       border-radius: var(--btn_border-mobile);
-     
+      margin: 0 auto;
     }
 
     img {
-      width: auto;
-      height: 250px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
       border-radius: var(--img_border-mobile);
     }
 
     .tekst_box_left {
-     max-width: 300px; 
+     max-width: 330px; 
     }
 
 
@@ -96,7 +101,6 @@ import Layout from "../layouts/Layout.astro";
 
     a {
       font-size: var(--button);
-   /*    padding: var(--btn_padding); */
       margin: var(--btn_margin);
       border-radius: var(--btn_border);
       
@@ -132,10 +136,14 @@ import Layout from "../layouts/Layout.astro";
       border-radius: var(--img_border-mobile);
     }
 
+    .tekst_box_left {
+     max-width: 370px; 
+    }
+
   }
 
 
-</style>  background-color: var(--red);
+</style> 
     
 
 

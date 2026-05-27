@@ -20,10 +20,10 @@
 
   /* font sizes */
 
-  --h1-mobil: 16px;
-  --h2-mobil: 14px;
+  --h1-mobile: 16px;
+  --h2-mobile: 14px;
   --p-mobil: 12px;
-  --button-mobil: 12px;
+  --button-mobile: 12px;
   --title-weight: 600;
 
   --h1: 48px;
@@ -36,16 +36,19 @@
 
   /* margin og padding */
 
-  --btn_padding-mobil: 10px 20px;
-  --btn_padding: 50px;
+  --btn_padding-mobile: 10px 20px;
+  --btn_padding: 50px 50px;
 
   --btn_margin-mobile: 25px;
   --btn_margin: 25px;
 
   /* border radius */
 
-  --btn_border-mobil: 25px;
+  --btn_border-mobile: 25px;
   --btn_border: 25px;
+
+  --img_border-mobile: 25px;
+  --img_border: 25px;
 }
 
 /* GLOBAL FONT */

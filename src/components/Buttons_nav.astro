@@ -3,13 +3,17 @@ import "../css/custom.css";
 ---
 
 <div class="nav_btns">
-  <a href="https://dankort.dk/oremaerket" class="nav-link">Vores koncept</a>
-  <a href="https://dankort.dk/oremaerket" class="nav-link active">Udforsk områderne</a>
-  <a href="https://dankort.dk/oremaerket" class="nav-link">Dankort i 3 trin</a>
+  <a href="/" class="nav-link">Vores koncept</a>
+  <a href="/detail" class="nav-link active">Udforsk områderne</a>
+  <a href="/stepbystep" class="nav-link">Dankort i 3 trin</a>
 </div>
 
+
+
 <style>
-  .nav_btns {
+  /* MOBILE FIRST */
+    
+   .nav_btns {
     top: 0;
     position: sticky;
     z-index: 999;
@@ -18,17 +22,38 @@ import "../css/custom.css";
     gap: 10px;
   }
 
+  
   .nav-link {
-    background-color: #b4b4b4;
-    color: black;
+    background-color: var(--grey);
+    color: var(--black);
+    
     text-decoration: none;
-    font-size: 14px;
     backdrop-filter: blur(90px);
+
+    font-size: var(--btn-mobile);
     transition: 0.3s ease;
     padding: 15px 30px;
     border-radius: 25px;
     margin: 10px;
   }
+
+
+
+  /* DESKTOP 1024PX */
+
+  @media (min-width: 1024px) {
+    .nav_btns {
+      gap: 50px;
+    }
+
+/* 
+  .nav-link {
+
+    font-size: 14px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin: 10px;
+  } */
 
   .nav-link:hover {
     background: #ebebeb;
@@ -39,10 +64,5 @@ import "../css/custom.css";
     background: #4a4a4a;
     color: white;
   }
-
-  @media (min-width: 1024px) {
-    .nav_btns {
-      gap: 50px;
-    }
   }
 </style>

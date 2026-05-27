@@ -1,0 +1,142 @@
+---
+import "../css/custom.css";
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout>
+  
+ <div class="banner_readmore">
+
+  <div class="tekst_box_left">
+
+<h2>Læs mere om samarbejdet her  </h2>
+<p>Dankort Øremærket blev lanceret i 2021 som en ordning, 
+  hvor der automatisk doneres 1 øre til Den Danske Naturfond, 
+  hver gang du betaler med dit Dankort. 
+  Initiativet blev skabt for at støtte vild, dansk natur 
+  og sikre store, beskyttede naturområder i Danmark...</p>
+
+<a href="https://naturfonden.dk/dankort/">Tag mig til Naturfonden</a>
+
+  </div>
+
+<img src="/src/img/loevfro_naturfond.webp" alt="">
+
+</div>
+
+</Layout>
+
+
+<style>
+  /* MOBILE FIRST */
+
+    h2 {
+      font-size: var(--h2-mobile);
+    }
+    
+    p {
+      font-size: var(--p-mobile);
+    }
+
+    .banner_readmore {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      gap: 20px;
+      padding: 10px;
+
+     
+      margin: 0 auto;
+
+    }
+
+
+    a {
+      text-decoration: none;
+      font-size: var(--button-mobile);
+
+      color: var(--white);
+      background-color: var(--red);
+
+      padding: var(--btn_padding-mobile);
+      border-radius: var(--btn_border-mobile);
+     
+    }
+
+    img {
+      width: auto;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--img_border-mobile);
+    }
+
+    .tekst_box_left {
+     max-width: 300px; 
+    }
+
+
+
+
+  /* DESKTOP */
+
+  @media (min-width: 1024px) {
+    main {
+      max-width: 1200px;
+    }
+
+
+    h2 {
+      font-size: var(--h2);
+    }
+    
+    p {
+      font-size: var(--p);
+    }
+
+    a {
+      font-size: var(--button);
+   /*    padding: var(--btn_padding); */
+      margin: var(--btn_margin);
+      border-radius: var(--btn_border);
+      
+    }
+
+    a:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      transition: 0.2 ease;
+}
+    .banner_readmore {
+      flex-direction: row;
+      justify-content: space-between;
+      
+      gap: 100px;
+    }
+
+    .tekst_box_left {
+     max-width: 800px;
+    }
+
+    img {
+    width: 350px;
+    height: auto;
+  }
+
+
+    img {
+      height: 350px;
+      width: auto;
+      
+      object-fit: cover;
+      border-radius: var(--img_border-mobile);
+    }
+
+  }
+
+
+</style>  background-color: var(--red);
+    
+
+
+

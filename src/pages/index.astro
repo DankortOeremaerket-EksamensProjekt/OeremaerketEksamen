@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import skyerbred from "../img/sky_clouds.webp";
 import surfer from "../img/surfer_girl.webp";
 import Icons from "../components/Icons.astro";
-import HeroVideo from "../components/Hero_video.astro";
+import HeroVideo from "../components/Hero_video.astro"
+import DonationTaeller from "../components/Donation_taeller.astro"
 import ButtonsNav from "../components/Buttons_nav.astro";
 import "../css/custom.css";
 import Banner from "../components/Card_step.astro";
@@ -11,12 +12,12 @@ import Taeller from "../components/Donation_taeller.astro";
 ---
 
 <Layout>
-  <HeroVideo />
-  <!-- <Taeller /> -->
-  <div class="hero-tekst">
-    <h1>Vi donerer til Den Danske Naturfond</h1>
-    <h2>Hver gang du bruger Dankort</h2>
-  </div>
+  <section class="hero">
+  <HeroVideo class="hero_video" />
+  <div class="taeller" >
+ <DonationTaeller />
+ </div>
+</section>
   <ButtonsNav />
   <Icons />
   <div class="koncept_1_1">
@@ -55,22 +56,6 @@ import Taeller from "../components/Donation_taeller.astro";
   @font-face {
     font-family: raleway;
     src: url(/fonts/Raleway-VariableFont_wght.ttf);
-  }
-  .hero-tekst {
-    text-align: left;
-    color: var(--white);
-    position: absolute;
-    z-index: 2;
-    left: 2rem;
-    top: 15rem;
-    max-width: 15rem;
-  }
-  .hero-tekst h1 {
-    font-size: var(--h1-mobile);
-  }
-  .hero-tekst h2 {
-    font-size: var(--h2-mobile);
-    font-weight: 300;
   }
 
   body {
@@ -150,25 +135,34 @@ import Taeller from "../components/Donation_taeller.astro";
     border-radius: 25px;
     height: fit-content;
   }
+    /* HERO */
+     
+    .hero {
+    position: relative;
+   
+  }
+    .hero_video{
+      display: block;
+   width: 100%;
+    }
+    .taeller{
+    position: absolute;
+
+  top: 1rem;
+  right: 16px;
+
+  z-index: 10;
+    }
 
   @media (min-width: 1024px) {
-    .hero-tekst {
-      text-align: left;
-      color: var(--white);
-      position: absolute;
-      z-index: 2;
-      left: 6rem;
-      top: 33rem;
-      max-width: 40rem;
+    /* HERO */
+    .hero {
+      height: 90%;
     }
-    .hero-tekst h1 {
-      font-size: var(--h1);
+    .taeller{
+      right:85px;
+      top:35px;
     }
-    .hero-tekst h2 {
-      font-size: var(--h2);
-      font-weight: 300;
-    }
-
     .koncept_tekst h1 {
       font-size: var(--h1);
     }

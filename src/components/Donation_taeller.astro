@@ -1,25 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro"
 import "../css/custom.css";
 ---
-
-<Layout>
-
-
 
 <div class="donation">
   <div class="headline">
     <span class="dot"></span>
-    <h2>Estimeret donation til den Danske Natur</h2>
+    <h2 class="desktop">Estimeret donation til den Danske Natur</h2>
+    <h2 class="mobile">Donation indtil videre</h2>
   </div>
-
   <h3>Januar 2026 - Nu</h3>
   <h1>2.918.994,65 KR.</h1>
 </div>
 
-
-
-</Layout>
 
 
 <style>
@@ -28,8 +20,8 @@ import "../css/custom.css";
 
 .headline {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items:first baseline;
+  color: var(--white);
 }
 
 .dot {
@@ -43,14 +35,15 @@ import "../css/custom.css";
 
 .headline h2 {
   margin: 0;
+  color: var(--white);
 }
 
 
 .donation {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25); 
+  background: none;
+  border: none; 
 
-  backdrop-filter: blur(10px);
+  backdrop-filter:none;
   
   border-radius: var(--btn_border);
   padding: 20px;
@@ -60,7 +53,47 @@ import "../css/custom.css";
 
 h1,
 h3 {
-  padding-left: 20px;
+  color: var(--white);
+  text-align: right;
 }
+h1{
+  font-size: 20px;
+  font-weight: 700;
+    font-family: "Raleway";
+}
+h2{
+  font-size: var(--h1-mobile);
+  font-weight: 600;
+}
+h3{
+font-size: 12px;
+font-weight: 700;
+}
+.desktop{
+  display:none;
 
+}
+.mobile{display: block;}
+ @media (min-width:1024px) {
+ .desktop{
+  display:block;
+ }
+ .mobile{
+  display:none;
+ }
+ .donation {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25); 
+
+  backdrop-filter: blur(10px);
+  
+  border-radius: var(--btn_border);
+  padding: 20px;
+  max-width: 350px;
+
+ }
+ .headline {
+  display: flex;
+  align-items: center;
+}
 </style>

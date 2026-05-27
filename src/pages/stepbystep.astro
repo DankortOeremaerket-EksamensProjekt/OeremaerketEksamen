@@ -26,6 +26,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
       <img src={Piggyback.src} alt="" class="step_pic" id="mobil_billed" />
     </div>
   </div>
+  <ButtonsNav />
   <img src={Mobilsti.src} alt="" class="mobil_sti" />
   <div class="step_by_step_title">
     <h1>3 nemme steps til Dankort</h1>
@@ -75,6 +76,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
     grid-template-columns: 1fr 120px;
     align-items: center;
     gap: 0.5rem;
+    padding-top: 1rem;
   }
   img {
     border-radius: 25px;
@@ -156,7 +158,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
     height: 48rem;
     left: 50%;
     transform: translateX(-50%);
-    top: 60%;
+    top: 75vh;
   }
   .step_by_step_title {
     text-align: center;
@@ -233,19 +235,19 @@ import Udfyld from "../img/udfyld_detaljer.webp";
     }
     .mobil_sti {
       height: 75rem;
-      top: 80%;
+      top: 85vh;
     }
   }
   @media (min-width: 1400px) {
     .mobil_sti {
-      height: 75rem;
-      top: 70%;
+      height: 80rem;
+      top: 100vh;
     }
   }
   @media (min-width: 2500px) {
     .mobil_sti {
       height: 75rem;
-      top: 35%;
+      top: 40vh;
     }
   }
 </style>

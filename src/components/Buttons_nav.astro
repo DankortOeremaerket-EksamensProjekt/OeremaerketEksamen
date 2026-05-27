@@ -4,16 +4,14 @@ import "../css/custom.css";
 
 <div class="nav_btns">
   <a href="/" class="nav-link">Vores koncept</a>
-  <a href="/detail" class="nav-link active">Udforsk områderne</a>
+  <a href="/detail" class="nav-link">Udforsk områderne</a>
   <a href="/stepbystep" class="nav-link">Dankort i 3 trin</a>
 </div>
 
-
-
 <style>
   /* MOBILE FIRST */
-    
-   .nav_btns {
+
+  .nav_btns {
     top: 0;
     position: sticky;
     z-index: 999;
@@ -22,47 +20,47 @@ import "../css/custom.css";
     gap: 10px;
   }
 
-  
   .nav-link {
-    background-color: var(--grey);
-    color: var(--black);
-    
+    background-color: var(--buttons-grey);
+    color: var(--white);
+    font-weight: var(--title-weight);
     text-decoration: none;
-    backdrop-filter: blur(90px);
+    backdrop-filter: blur(10px);
 
-    font-size: var(--btn-mobile);
+    font-size: var(--button-mobile);
     transition: 0.3s ease;
-    padding: 15px 30px;
+    padding: var(--btn_padding-mobile);
     border-radius: 25px;
     margin: 10px;
+    box-shadow:
+      inset -1px 2px 5px var(--lightest-grey),
+      inset -1px 2px 2px var(--grey);
   }
-
-
 
   /* DESKTOP 1024PX */
 
   @media (min-width: 1024px) {
     .nav_btns {
       gap: 50px;
+      margin: 2rem 0;
     }
 
-/* 
-  .nav-link {
+    .nav-link {
+      font-size: var(--button);
+      padding: var(--btn_padding);
+      border-radius: 25px;
+      margin: 10px;
+    }
 
-    font-size: 14px;
-    padding: 15px 30px;
-    border-radius: 25px;
-    margin: 10px;
-  } */
+    .nav-link:hover {
+      background: var(--buttons-hover);
+      cursor: pointer;
+      color: var(--white);
+    }
 
-  .nav-link:hover {
-    background: #ebebeb;
-    cursor: pointer;
-  }
-
-  .nav-link.active {
-    background: #4a4a4a;
-    color: white;
-  }
+    .nav-link.active {
+      background: #4a4a4a;
+      color: white;
+    }
   }
 </style>

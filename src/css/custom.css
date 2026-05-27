@@ -10,6 +10,8 @@
   --light-grey: #d9d9d9; /* Footer-farve, dots */
   --lightest-grey: #ebebeb;
   --header-grey: rgb(227, 227, 227, 0.8);
+  --buttons-grey: rgba(122, 122, 122, 0.8);
+  --buttons-hover: rgba(113, 113, 113, 0.8);
 
   --yellow: #ffd998; /* Ikon-farve, card-color */
   --light-yellow: #ffe8b6;
@@ -22,7 +24,7 @@
 
   --h1-mobile: 16px;
   --h2-mobile: 14px;
-  --p-mobil: 12px;
+  --p-mobile: 12px;
   --button-mobile: 12px;
   --title-weight: 600;
 

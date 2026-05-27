@@ -38,7 +38,7 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
   >
-    <rect width="518" height="326" fill="url(#pattern0_834_4347)"></rect>
+    <rect width="418" height="256" fill="url(#pattern0_834_4347)"></rect>
     <defs>
       <pattern
         id="pattern0_834_4347"
@@ -181,8 +181,8 @@
     margin: 25px 24px;
     border-radius: var(--btn_border-mobile);
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
     color: var(--white);
     text-align: left;
   }
@@ -216,7 +216,7 @@
     text-decoration: none;
     font-size: var(--button-mobile);
     font-weight: 700;
-    padding: var(--btn_padding-mobile);
+    padding: var(--btn_padding);
     border-radius: var(--btn_border-mobile);
     text-align: center;
     align-self: flex-end;
@@ -232,6 +232,7 @@
     font-size: var(--h1-mobile);
   }
   #p_mobile {
+    font-weight: 500;
     font-size: var(--p-mobile);
   }
   /* DESKTOP */
@@ -248,7 +249,7 @@
     #p_desktop {
       display: block;
       font-weight: 400;
-      font-size: 24px;
+      font-size: var(--p);
     }
     #card_desktop {
       display: block;
@@ -261,13 +262,13 @@
     .card_step {
       column-gap: 2rem;
       margin: 64px 80px;
-      padding: 3rem;
+      padding: 2rem;
     }
     .card_step_btn {
       font-size: var(--button);
       font-weight: 700;
       align-self: flex-start;
-      padding: 23px;
+      padding: var(--btn_padding);
     }
     #card_step_btn_desktop {
       display: block;

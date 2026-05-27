@@ -16,14 +16,17 @@ console.log("Error:", error);
 <Layout>
   <main>
 
-    <!-- HERO BILLEDE -->
-    <div class="hero_photos">
-      <img src="/src/img/hero_detail.webp" alt="" class="hero-img layer layer1" />
-      <img src="/src/img/hero_detail.webp" alt="" class="hero-desktop layer layer2" />
-      <img src="/src/img/hero_detail.webp" alt="" class="hero-desktop layer layer3" />
- 
- <div class="nature-text_desktop">
-      <h1>Vi giver plads til den Danske Natur.</h1>
+    <!-- HERO BILLEDER OG TEKST, DESKTOP-->
+<section class="hero-box">
+
+    <div class="hero-photos">
+      <img src="/src/img/sandy_beach.webp" alt="" class="hero-img layer layer1" />
+      <img src="/src/img/sandy_beach_coastline.webp" alt="" class="hero-desktop layer layer2" />
+      <img src="/src/img/grassy_beach_sunset.webp" alt="" class="hero-desktop layer layer3" />
+    </div>
+
+ <div class="nature-text-desktop">
+      <h1>Vi giver plads til den Danske Natur</h1>
       <p>
         Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
         Naturfond. Det bliver til mere end 10 millioner kroner hvert år, der går
@@ -31,18 +34,19 @@ console.log("Error:", error);
         Vi kalder det Dankort Øremærket. Målet er ikke at forbruge mere, men at
         skabe mere plads til den danske natur.
       </p>
-    </div>
+  </div>
 
-    </div>
+</section> 
 
 
 
     <!-- 3 KNAPPER -->
     <Buttons />
 
-    <!-- TEKST -->
-    <div class="nature-text">
-      <h1>Vi giver plads til den Danske Natur.</h1>
+       <!-- HERO BILLEDE OG TEKST, DESKTOP-->
+
+    <div class="nature-text-mobile">
+      <h1>Vi giver plads til den Danske Natur - MOBIL VISNING</h1>
       <p>
         Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
         Naturfond. Det bliver til mere end 10 millioner kroner hvert år, der går
@@ -51,6 +55,13 @@ console.log("Error:", error);
         skabe mere plads til den danske natur.
       </p>
     </div>
+
+
+
+
+
+
+
 
     <!-- KORT OVERSKRIFT -->
     <h2>Her donerer vi til den danske natur</h2>
@@ -135,24 +146,26 @@ console.log("Error:", error);
 
 
 <style>
+  /* MOBILE FIRST */
+
   main {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
   }
 
- /*  .hero-img {
-    width: 100%;
-    height: auto;
-  } */
 
-  .hero-desktop {
+  .hero-desktop, 
+  .nature-text-desktop {
     display: none;
   }
 
-  .nature-text {
+
+  .nature-text-mobile {
     padding: 0 1rem;
   }
+  
+
 
   h1 {
     font-size: var(--h1-mobil);
@@ -168,6 +181,9 @@ console.log("Error:", error);
   p {
     font-size: var(--p-mobil);
   }
+
+
+
 
   /* KORT + CARD WRAPPER */
   .map-card-wrapper {
@@ -266,61 +282,105 @@ console.log("Error:", error);
   }
 
   /* DESKTOP */
+
   @media (min-width: 1024px) {
     main {
       max-width: 1200px;
     }
 
-.hero-desktop {
+
+.hero-desktop, 
+.nature-text-desktop {
     display: block;
   }
 
-  /*   .hero-photos {
-      width: 95%;
-      height: 400px;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      border-radius: 16px;
-    } */
-
-
-
-.hero-photos  {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  
-}
-
-
-
-.nature-text {
+  .nature-text-mobile {
   display: none;
 }
 
-    .nature-text_desktop {
-      max-width: 700px;
+  .nature-text-desktop {
+      max-width: 50%;
       margin: 2rem auto;
       padding: 0 2rem;
     }
 
-    h1 {
+  h1 {
       font-size: var(--h1);
     }
 
-    h2 {
+  h2 {
       font-size: var(--h2);
       margin-bottom: 1.5rem;
     }
 
-    p {
+  p {
       font-size: var(--p);
     }
 
+
+
+  /* HERO-BILLEDER I LAG */
+
+
+
+.layer3 {
+  height: 450px;
+  width: auto;
+}
+
+
+  .hero-box  {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; 
+}
+
+.hero-photos {
+  position: relative;  
+  height: 450px;
+  width: 50%;
+  
+}
+
+.hero-photos img { 
+  position: absolute;
+/*   width: 50%; */
+
+  height: auto;
+  object-fit: cover;
+ 
+}
+
+  /* LAG 1 – Sandy Beach */
+    .layer1 {
+    top: 60px;
+    left: 0%;
+    z-index: 1;
+    width: 75%;
+  }
+
+  /* LAG 2 – Coastline */
+  .layer2 {
+    top: 250px;
+    left: 7%;
+    z-index: 3;
+    width: 60%;
+  }
+
+  /* LAG 3 – Lodret water */
+  .layer3 {
+    top: 110px;
+    left: 50%;
+    z-index: 2;
+    width: 50%;
+  }
+
+
+
+
+
+
+    /* DANMARKSKORTET */
     .map-card-wrapper {
       flex-direction: row;
       align-items: flex-start;
@@ -329,6 +389,7 @@ console.log("Error:", error);
       max-width: 1200px;
       margin: 0 auto;
     }
+
 
     /* KORTET — lidt mindre på desktop */
     .map-container {

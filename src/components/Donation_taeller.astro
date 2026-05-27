@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro"
+import "../css/custom.css";
+---
+
+<Layout>
+
+
+
+<div class="donation">
+  <div class="headline">
+    <span class="dot"></span>
+    <h2>Estimeret donation til den Danske Natur</h2>
+  </div>
+
+  <h3>Januar 2026 - Nu</h3>
+  <h1>2.918.994,65 KR.</h1>
+</div>
+
+
+
+</Layout>
+
+
+<style>
+/*   CSS - MOBILE FIRST */
+
+
+.headline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 20px;
+  height: 15px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: -27px;
+}
+
+.headline h2 {
+  margin: 0;
+}
+
+
+.donation {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25); 
+
+  backdrop-filter: blur(10px);
+  
+  border-radius: var(--btn_border);
+  padding: 20px;
+  max-width: 350px;
+
+}
+
+h1,
+h3 {
+  padding-left: 20px;
+}
+
+</style>

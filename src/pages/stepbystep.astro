@@ -79,11 +79,13 @@ import Udfyld from "../img/udfyld_detaljer.webp";
   const scrollToSteps = document.getElementById("jump_down_button");
   const stepsSection = document.getElementById("steps");
 
-  scrollToSteps.onclick = () => {
-    stepsSection.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  if (scrollToSteps && stepsSection) {
+    scrollToSteps.onclick = () => {
+      stepsSection.scrollIntoView({
+        behavior: "smooth",
+      });
+    };
+  }
 </script>
 
 <style>

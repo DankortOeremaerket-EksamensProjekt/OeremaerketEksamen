@@ -3,9 +3,11 @@ import "../css/custom.css";
 ---
 
 <div class="nav_btns">
+
   <a href="/" class="nav-link">Vores koncept</a>
-  <a href="/detail" class="nav-link active">Udforsk områderne</a>
+  <a href="/detail" class="nav-link active">Udforsk områderne</a> 
   <a href="/stepbystep" class="nav-link">Dankort i 3 trin</a>
+
 </div>
 
 
@@ -17,25 +19,38 @@ import "../css/custom.css";
     top: 0;
     position: sticky;
     z-index: 999;
+
     display: flex;
     justify-content: center;
-    gap: 10px;
+    
+    gap: 0px;
+    margin: 0 auto;
   }
 
   
   .nav-link {
     background-color: var(--grey);
     color: var(--black);
+    border: 1px solid rgba(255, 255, 255, 0.25); 
     
     text-decoration: none;
-    backdrop-filter: blur(90px);
+    backdrop-filter: blur(80px);
 
-    font-size: var(--btn-mobile);
-    transition: 0.3s ease;
-    padding: 15px 30px;
+    font-size: var(--button-mobile);
+  
+    padding: 10px 25px;
     border-radius: 25px;
     margin: 10px;
   }
+
+
+/* Mega lækker feature, men kan kun finde ud af at gøre det lokalt, 
+   ikke i Astro som component. Nice to i Trello for now...
+   
+   .nav-link.active {
+    background: var(--darkest-grey);
+    color: var(--white);
+  } */
 
 
 
@@ -43,26 +58,32 @@ import "../css/custom.css";
 
   @media (min-width: 1024px) {
     .nav_btns {
-      gap: 50px;
+      gap: 80px;
+
     }
 
-/* 
-  .nav-link {
 
-    font-size: 14px;
-    padding: 15px 30px;
-    border-radius: 25px;
-    margin: 10px;
-  } */
+    .nav-link {
+
+    font-size: 20px;
+    padding: 20px 40px;
+
+    border-radius: var(--btn_border);
+    margin: var(--btn-margin);
+  }  
+
 
   .nav-link:hover {
-    background: #ebebeb;
+    background: var(--light-grey);
     cursor: pointer;
+    transition: 0.5s ease;
   }
 
-  .nav-link.active {
-    background: #4a4a4a;
-    color: white;
-  }
+
+
+
+
+
+
   }
 </style>

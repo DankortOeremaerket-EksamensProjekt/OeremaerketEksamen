@@ -46,7 +46,7 @@ console.log("Error:", error);
        <!-- HERO BILLEDE OG TEKST, DESKTOP-->
 
     <div class="nature-text-mobile">
-      <h1>Vi giver plads til den Danske Natur - MOBIL VISNING</h1>
+      <h1>Vi giver plads til den Danske Natur</h1>
       <p>
         Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske
         Naturfond. Det bliver til mere end 10 millioner kroner hvert år, der går
@@ -160,6 +160,11 @@ console.log("Error:", error);
     display: none;
   }
 
+ .hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  }
 
   .nature-text-mobile {
     padding: 0 1rem;
@@ -168,19 +173,28 @@ console.log("Error:", error);
 
 
   h1 {
-    font-size: var(--h1-mobil);
+    font-size: var(--h1-mobile);
   }
 
   h2 {
-    font-size: var(--h2-mobil);
+    font-size: var(--h2-mobile);
     text-align: center;
     color: var(--red);
     padding: 0 1rem;
   }
 
   p {
-    font-size: var(--p-mobil);
+    font-size: var(--p-mobile);
   }
+
+  
+.hero-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center; 
+  align-items: center;
+}
+
 
 
 
@@ -246,13 +260,13 @@ console.log("Error:", error);
   }
 
   .card-detail h3 {
-    font-size: var(--h2-mobil);
+    font-size: var(--h2-mobile);
     margin: 0;
   }
 
   /* UNDERTITEL */
   .card-undertitel {
-    font-size: var(--p-mobil);
+    font-size: var(--p-mobile);
     color: var(--dark-grey);
     margin: 0;
     font-style: italic;
@@ -270,12 +284,12 @@ console.log("Error:", error);
   }
 
   .card-detail button {
-    font-size: var(--button-mobil);
+    font-size: var(--button-mobile);
     background-color: var(--red);
     color: white;
     border: none;
-    border-radius: var(--btn_border-mobil);
-    padding: var(--btn_padding-mobil);
+    border-radius: var(--btn_border-mobile);
+    padding: var(--btn_padding-mobile);
     cursor: pointer;
     width: 100%;
     margin: 0;
@@ -420,7 +434,7 @@ console.log("Error:", error);
     .card-detail button {
       font-size: var(--button);
       border-radius: var(--btn_border);
-      padding: var(--btn_padding-mobil);
+      padding: var(--btn_padding-mobile);
     }
 
     .pin {

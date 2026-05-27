@@ -19,7 +19,12 @@ import Udfyld from "../img/udfyld_detaljer.webp";
         Følg vores nemme step by step guide, så du hurtigt kan komme i gang med
         at støtte både natur og lokal butikker.
       </p>
-      <img src={Jumpdown.src} alt="" class="jump_down_button" />
+      <img
+        src={Jumpdown.src}
+        alt=""
+        class="jump_down_button"
+        id="jump_down_button"
+      />
     </div>
     <div class="step_billeder">
       <img src={Smallshop.src} alt="" class="step_pic" id="desktop_billed" />
@@ -28,7 +33,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
   </div>
   <ButtonsNav />
   <img src={Mobilsti.src} alt="" class="mobil_sti" />
-  <div class="step_by_step_title">
+  <div class="step_by_step_title" id="steps">
     <h1>3 nemme steps til Dankort</h1>
   </div>
   <div class="step_by_step">
@@ -70,6 +75,17 @@ import Udfyld from "../img/udfyld_detaljer.webp";
   </div>
 </Layout>
 
+<script>
+  const scrollToSteps = document.getElementById("jump_down_button");
+  const stepsSection = document.getElementById("steps");
+
+  scrollToSteps.onclick = () => {
+    stepsSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+</script>
+
 <style>
   .step_2_1 {
     display: grid;
@@ -95,19 +111,23 @@ import Udfyld from "../img/udfyld_detaljer.webp";
     padding: 1.5rem 1rem 1.5rem 1.5rem;
   }
   h1 {
-    font-size: var(--h1-mobil);
+    font-size: var(--h1-mobile);
   }
   p {
-    font-size: var(--p-mobil);
+    font-size: var(--p-mobile);
   }
   h2 {
-    font-size: var(--h2-mobil);
+    font-size: var(--h2-mobile);
   }
   .step_billeder {
     position: relative;
     width: 120px;
     height: auto;
     overflow: hidden;
+  }
+  .jump_down_button:hover {
+    cursor: pointer;
+    filter: grayscale(30%);
   }
 
   /*step-by-step*/
@@ -165,7 +185,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
     padding: 2rem 0;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 1024px) {
     .step_2_1 {
       max-width: 1200px;
       padding: 5rem 0;

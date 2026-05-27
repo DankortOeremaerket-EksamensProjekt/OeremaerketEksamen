@@ -84,20 +84,20 @@ import Banner from "../components/Banner_red_DK.astro";
   }
 
   .koncept_tekst h1 {
-    font-size: var(--h1-mobil);
+    font-size: var(--h1-mobile);
     color: var(--black);
     font-family: raleway;
     font-weight: var(--title-weight);
   }
   .koncept_tekst p {
-    font-size: var(--p-mobil);
+    font-size: var(--p-mobile);
     color: var(--black);
   }
 
   .koncept_button a {
     text-decoration: none;
     color: var(--white);
-    font-size: var(--button-mobil);
+    font-size: var(--button-mobile);
     font-weight: var(--title-weight);
   }
   .kant_billede {
@@ -127,13 +127,13 @@ import Banner from "../components/Banner_red_DK.astro";
     text-align: center;
     margin-top: 1rem;
     width: fit-content;
-    padding: var(--btn_padding-mobil);
+    padding: var(--btn_padding-mobile);
     background-color: var(--red);
     border-radius: 25px;
     height: fit-content;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 1024px) {
     .hero {
       height: 90%;
     }
@@ -182,6 +182,9 @@ import Banner from "../components/Banner_red_DK.astro";
     }
     .koncept_button a {
       font-size: var(--button);
+    }
+    .koncept_button {
+      padding: var(--btn_padding);
     }
   }
 </style>

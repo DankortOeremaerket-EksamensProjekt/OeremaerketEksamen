@@ -1,19 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import custom from "../custom.css"
-import general from "../general.css"
+import "../css/custom.css";
 ---
 
 <Layout>
 
 
 
-<div class="nav_btns">
-  <a href="https://dankort.dk/oremaerket" class="nav-link active">Knap 1</a>
-  <a href="https://dankort.dk/oremaerket" class="nav-link">Knap 2</a>
-  <a href="https://dankort.dk/oremaerket" class="nav-link">Knap 3</a>
-</div>
+<div class="donation">
+  <div class="headline">
+    <span class="dot"></span>
+    <h2>Estimeret donation til den Danske Natur</h2>
+  </div>
 
+  <h3>Januar 2026 - Nu</h3>
+  <h1>2.918.994,65 KR.</h1>
+</div>
 
 
 
@@ -23,63 +25,42 @@ import general from "../general.css"
 <style>
 /*   CSS - MOBILE FIRST */
 
-.nav_btns {
-  top: 0;
-  position: sticky;
-  z-index: 999;
 
+.headline {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
+}
 
+.dot {
+  width: 20px;
+  height: 15px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: -27px;
+}
 
+.headline h2 {
+  margin: 0;
 }
 
 
-.nav-link  {
-background-color: #b4b4b4;
-color: black;
+.donation {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25); 
 
-/* font-family: var */
-text-decoration: none;
-
-backdrop-filter: blur(90px);  
-transition: 0.3s ease;
-
-padding: 15px 30px 15px 30px;
-border-radius: 25px;
-margin: 10px;
+  backdrop-filter: blur(10px);
+  
+  border-radius: var(--btn_border);
+  padding: 20px;
+  max-width: 350px;
 
 }
 
-.nav-link:hover {
- background: #ebebeb;
- cursor: pointer;
+h1,
+h3 {
+  padding-left: 20px;
 }
-
-
-/* Active state – skal sættes på den side, man er på */
-.nav-link.active {
-  background: #4a4a4a;
-  color: white;
-}
-
-
-
-/* CSS DESKTOP */
-
-@media (min-width: 1024px) { 
-
-    .nav_btns {  
-  gap: 50px;
-
-    }
-
-    
-
-
-
-}
-
 
 </style>

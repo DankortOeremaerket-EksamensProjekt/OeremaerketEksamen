@@ -59,7 +59,6 @@ import "../css/custom.css";
 
       text-decoration: none;
       font-size: var(--button-mobile);
-      max-width: 100%; 
 
       color: var(--white);
       background-color: var(--red);
@@ -72,12 +71,15 @@ import "../css/custom.css";
     img {
       width: 100%;
       height: 200px;
+      max-width: 250px;
+
+
       object-fit: cover;
       border-radius: var(--img_border-mobile);
     }
 
     .tekst_box_left {
-     max-width: 330px; 
+     max-width: 250px; 
     }
 
 
@@ -86,9 +88,6 @@ import "../css/custom.css";
   /* DESKTOP */
 
   @media (min-width: 1024px) {
-    main {
-      max-width: 1200px;
-    }
 
 
     h2 {
@@ -101,8 +100,11 @@ import "../css/custom.css";
 
     a {
       font-size: var(--button);
-      margin: var(--btn_margin);
+
       border-radius: var(--btn_border);
+      max-width: 250px;
+
+      /*       margin: var(--btn_margin); */
       
     }
 
@@ -115,29 +117,21 @@ import "../css/custom.css";
       flex-direction: row;
       justify-content: space-between;
       
-      gap: 100px;
+      gap: 70px;
     }
 
     .tekst_box_left {
-     max-width: 800px;
+     max-width: 660px;
+   
     }
 
     img {
-    width: 350px;
-    height: auto;
-  }
-
-
-    img {
-      height: 350px;
+      height: 280px;
       width: auto;
+      min-width: 300px;
       
       object-fit: cover;
       border-radius: var(--img_border-mobile);
-    }
-
-    .tekst_box_left {
-     max-width: 370px; 
     }
 
   }

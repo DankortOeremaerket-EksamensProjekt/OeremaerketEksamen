@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import "../../css/custom.css";
+import "../css/reset.css";
 import Buttons from "../../components/Buttons_nav.astro";
 import Banner from "../../components/Banner_read_more.astro";
 import { supabase } from "../../lib/supabase.js";
@@ -25,7 +26,7 @@ export async function getStaticPaths() {
   const { createClient } = await import("@supabase/supabase-js");
   const supabase = createClient(
     import.meta.env.PUBLIC_SUPABASE_URL,
-    import.meta.env.PUBLIC_SUPABASE_KEY
+    import.meta.env.PUBLIC_SUPABASE_KEY,
   );
   const { data } = await supabase.from("naturomraader").select("slug");
   return data.map((sted) => ({
@@ -36,7 +37,6 @@ export async function getStaticPaths() {
 
 <Layout>
   <main>
-
     <!-- MOBIL BILLEDE 1 -->
     <img src={sted.billede_url} alt={sted.navn} class="img_mobile-1" />
 
@@ -62,7 +62,6 @@ export async function getStaticPaths() {
     <img src={sted.billede_url_2} alt={sted.navn} class="img_mobile-2" />
 
     <Banner />
-
   </main>
 </Layout>
 

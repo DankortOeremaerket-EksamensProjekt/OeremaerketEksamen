@@ -8,6 +8,7 @@ import HeroVideo from "../components/Hero_video.astro";
 import DonationTaeller from "../components/Donation_taeller.astro";
 import Buttons from "../components/Buttons_nav.astro";
 import "../css/custom.css";
+import "../css/reset.css";
 import Banner from "../components/Card_step.astro";
 import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
 ---
@@ -21,14 +22,14 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
     <div class="overskrift">
       <OverskriftHeroIndex />
     </div>
-     <!-- 3 KNAPPER -->
-      <!--   <ButtonsNav /> -->
+    <!-- 3 KNAPPER -->
+    <!--   <ButtonsNav /> -->
     <div class="buttons">
-    <Buttons />
-     </div>
+      <Buttons />
+    </div>
   </section>
-   <div class="icons">
-  <Icons />
+  <div class="icons">
+    <Icons />
   </div>
   <div class="koncept_1_1">
     <div class="koncept_tekst">
@@ -74,7 +75,7 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
   img {
     border-radius: 25px;
   }
-  .icons{
+  .icons {
     position: relative;
   }
   .koncept_1_1 {
@@ -155,6 +156,7 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
 
   .hero {
     position: relative;
+    height: max-content;
   }
   .hero_video {
     display: block;
@@ -170,20 +172,21 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
   }
   .overskrift {
     position: absolute;
-    bottom: 90px;
+    bottom: 100px;
     left: 26px;
     z-index: 10;
     text-align: left;
+    height: max-content;
   }
-   .buttons{
+  .buttons {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 25px;
-   }
+  }
   @media (min-width: 1024px) {
     /* HERO */
     .hero {
-      height: 90%;
+      height: auto;
     }
     .taeller {
       right: 85px;
@@ -196,10 +199,10 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
       z-index: 9999;
       text-align: left;
     }
-    .buttons{
+    .buttons {
       position: relative;
       z-index: 999;
-     bottom: 119px;
+      bottom: 119px;
     }
     .koncept_tekst h1 {
       font-size: var(--h1);
@@ -249,6 +252,5 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
     .koncept_button {
       padding: var(--btn_padding);
     }
-   }
-
+  }
 </style>

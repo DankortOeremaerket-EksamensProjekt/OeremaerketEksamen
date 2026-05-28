@@ -20,17 +20,19 @@ import "../css/custom.css";
 
 .headline {
   display: flex;
-  align-items:first baseline;
+  align-items: baseline;
   color: var(--white);
 }
 
 .dot {
-  width: 20px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background-color: var(--red);
   border-radius: 50%;
-  display: inline-block;
-  margin-top: -27px;
+  display: flex;
+  align-items: center;
+  
+  margin-right:16px;
 }
 
 .headline h2 {
@@ -95,6 +97,32 @@ font-weight: 700;
  .headline {
   display: flex;
   align-items: center;
+}
+h1{
+  font-size: 32px;
+  font-weight: 700;
+    font-family: "Raleway";
+    text-align: center;
+    margin-top: 49px;
+}
+h2{
+  font-size: 24px;
+  font-weight: 900;
+  text-align: right;
+}
+h3{
+font-size: 20px;
+font-weight: 700;
+}
+.dot{
+  width:16px ;
+  height: 16px;
+   min-width: 16px;
+  min-height: 16px;
+  display: flex;
+  flex-shrink: 0;
+  margin-bottom: 28px;
+
 }
  }
 </style>

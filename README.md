@@ -197,6 +197,8 @@ OEREMAERKETEKSAMEN/
 │   │   └── supabase.js
 │   │
 │   ├── pages/
+        └── productlist/
+              └── [slug].astro
         ├── detail.astro
         ├── index.astro
         ├── spec.details.astro

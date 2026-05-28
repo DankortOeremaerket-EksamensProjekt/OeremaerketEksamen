@@ -1,26 +1,36 @@
 ---
 import "../css/custom.css";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <div class="nav_btns">
-  <a href="/" class="nav-link">Vores koncept</a>
-  <a href="/detail" class="nav-link active">Udforsk områderne</a>
-  <a href="/stepbystep" class="nav-link">Dankort i 3 trin</a>
+  <a href="/" class={`nav-link ${currentPath === "/" ? "active" : ""}`}
+    >Vores koncept</a
+  >
+  <a
+    href="/detail"
+    class={`nav-link ${currentPath === "/detail" ? "active" : ""}`}
+    >Udforsk områderne</a
+  >
+  <a
+    href="/stepbystep"
+    class={`nav-link ${currentPath === "/stepbystep" ? "active" : ""}`}
+    >Dankort i 3 trin</a
+  >
 </div>
-
 
 <style>
   /* MOBILE FIRST */
 
-  .nav_btns{
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  white-space: nowrap;
-}
+  .nav_btns {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 
   .nav-link {
     background-color: var(--buttons-grey);
@@ -40,11 +50,10 @@ import "../css/custom.css";
   }
 
   /* Active state – skal sættes på den side, man er på */
-.nav-link.active {
-  background: #4a4a4a;
-  color: white;
-}
-
+  .nav-link.active {
+    background: #4a4a4a;
+    color: white;
+  }
 
   /* DESKTOP 1024PX */
 
@@ -72,36 +81,4 @@ import "../css/custom.css";
       color: white;
     }
   }
-  /* FUNKTION */
-  .nav_btns.fixed{
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-    white-space: nowrap;
-}
 </style>
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-
-  if (window.innerWidth < 1024) return;
-
-  const nav = document.querySelector('.nav_btns');
-
-  if (!nav) return;
-
-  const triggerTop = nav.getBoundingClientRect().top + window.scrollY;
-
-  window.addEventListener('scroll', () => {
-
-    if (window.scrollY >= triggerTop) {
-      nav.classList.add('fixed');
-    } else {
-      nav.classList.remove('fixed');
-    }
-
-  });
-
-});
-</script>

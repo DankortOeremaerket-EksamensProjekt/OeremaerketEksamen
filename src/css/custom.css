@@ -10,6 +10,8 @@
   --light-grey: #d9d9d9; /* Footer-farve, dots */
   --lightest-grey: #ebebeb;
   --header-grey: rgb(227, 227, 227, 0.8);
+  --buttons-grey: rgb(122, 122, 122, 0.8);
+  --buttons-hover: rgba(60, 60, 60, 0.8);
 
   --yellow: #ffd998; /* Ikon-farve, card-color */
   --light-yellow: #ffe8b6;
@@ -20,10 +22,10 @@
 
   /* font sizes */
 
-  --h1-mobil: 16px;
-  --h2-mobil: 14px;
-  --p-mobil: 12px;
-  --button-mobil: 12px;
+  --h1-mobile: 16px;
+  --h2-mobile: 14px;
+  --p-mobile: 12px;
+  --button-mobile: 12px;
   --title-weight: 600;
 
   --h1: 48px;
@@ -34,18 +36,29 @@
   --icons-h-desktop: 20px;
   --icons-p-desktop: 15px;
 
+  /* FONT WEIGHT */
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extrabold: 800;
+  --black_weight: 900;
+
   /* margin og padding */
 
-  --btn_padding-mobil: 10px 20px;
-  --btn_padding: 50px;
+  --btn_padding-mobile: 10px 20px;
+  --btn_padding: 15px 25px;
 
   --btn_margin-mobile: 25px;
   --btn_margin: 25px;
 
   /* border radius */
 
-  --btn_border-mobil: 25px;
+  --btn_border-mobile: 25px;
   --btn_border: 25px;
+
+  --img_border-mobile: 25px;
+  --img_border: 25px;
 }
 
 /* GLOBAL FONT */

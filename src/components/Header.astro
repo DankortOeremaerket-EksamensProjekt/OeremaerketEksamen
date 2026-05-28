@@ -1,13 +1,16 @@
 ---
 import "../css/custom.css";
+import "../css/reset.css";
 ---
 
 <header>
   <div class="dk-header">
-    <div class="logo">
-      <img src="/DK_Logo_CMYK.svg" alt="Dankort" />
-      <h2>ØREMÆRKET</h2>
-    </div>
+    <a href="/"
+      ><div class="logo">
+        <img src="/DK_Logo_CMYK.svg" alt="Dankort" />
+        <h2>ØREMÆRKET</h2>
+      </div></a
+    >
 
     <button class="burger" id="burger" aria-label="Åbn menu">
       <span></span>
@@ -43,7 +46,6 @@ import "../css/custom.css";
     src: url(/fonts/Raleway-VariableFont_wght.ttf);
   }
   header {
-    position: sticky;
     top: 0;
     background-color: var(--header-grey);
     z-index: 10;
@@ -55,6 +57,9 @@ import "../css/custom.css";
     justify-content: space-between;
     align-items: center;
     height: 64px;
+  }
+  .dk-header a {
+    text-decoration: none;
   }
 
   .logo img {
@@ -73,7 +78,7 @@ import "../css/custom.css";
     color: var(--black);
     align-self: center;
     font-weight: 600;
-    font-size: var(--p-mobil);
+    font-size: var(--p-mobile);
   }
 
   .burger {

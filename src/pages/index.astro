@@ -1,23 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import placeholder from "../img/placeholder.png";
+
 import skyerbred from "../img/sky_clouds.webp";
 import surfer from "../img/surfer_girl.webp";
 import Icons from "../components/Icons.astro";
-import ButtonsNav from "../components/Buttons_nav.astro";
+import HeroVideo from "../components/Hero_video.astro";
+import DonationTaeller from "../components/Donation_taeller.astro";
+import Buttons from "../components/Buttons_nav.astro";
 import "../css/custom.css";
+
+import Banner from "../components/Card_step.astro";
+import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
 ---
 
 <Layout>
-  <img src={placeholder.src} alt="" class="hero" />
-  <!-- <ButtonsNav /> -->
-  <Icons />
+  <section class="hero">
+    <HeroVideo />
+    <div class="taeller">
+      <DonationTaeller />
+    </div>
+    <div class="overskrift">
+      <OverskriftHeroIndex />
+    </div>
+    <!-- 3 KNAPPER -->
+    <!--   <ButtonsNav /> -->
+    <div class="buttons">
+      <Buttons />
+    </div>
+  </section>
+  <div class="icons">
+    <Icons />
+  </div>
   <div class="koncept_1_1">
     <div class="koncept_tekst">
       <h1>Vi donerer til Den Danske Naturfond</h1>
       <p>
-        Vores koncept er helt enkelt: Brug dit Dankort, når du handler, og vi
-        donere 1 øre pr. transaktion til den Danske Naturfond.
+        Vores koncept er helt enkelt: Brug dit Dankort, når du betaler, og vi
+        donerer 1 øre pr. transaktion til den Danske Naturfond.
       </p>
       <p>
         Hertil donere både vores samarbejdspartnere i form af udvalgte danske
@@ -25,10 +44,10 @@ import "../css/custom.css";
       </p>
       <p>
         Dvs. Der kan blive doneret op til 3 øre for din transaktion, hver gang,
-        du handler!
+        du handler med Dankort!
       </p>
       <div class="koncept_button">
-        <a href="/">Se naturområder her</a>
+        <a href="/detail">Se støttede områder her</a>
       </div>
     </div>
     <div class="koncept_billeder">
@@ -41,6 +60,7 @@ import "../css/custom.css";
       <img src={surfer.src} alt="" class="kant_billede" id="kant_portrait" />
     </div>
   </div>
+  <Banner />
 </Layout>
 
 <style>
@@ -48,16 +68,18 @@ import "../css/custom.css";
     font-family: raleway;
     src: url(/fonts/Raleway-VariableFont_wght.ttf);
   }
-  .hero {
-    width: 95%;
-    height: 30%;
-    margin-top: 1rem;
-  }
+
   body {
     text-align: center;
   }
+h1 {
+    margin-bottom: 1rem;
+  }
   img {
     border-radius: 25px;
+  }
+  .icons {
+    position: relative;
   }
   .koncept_1_1 {
     display: grid;
@@ -80,22 +102,25 @@ import "../css/custom.css";
     height: 230px;
     overflow: hidden;
   }
+  .koncept_button:hover {
+    filter: grayscale(30%);
+  }
 
   .koncept_tekst h1 {
-    font-size: var(--h1-mobil);
+    font-size: var(--h1-mobile);
     color: var(--black);
     font-family: raleway;
     font-weight: var(--title-weight);
   }
   .koncept_tekst p {
-    font-size: var(--p-mobil);
+    font-size: var(--p-mobile);
     color: var(--black);
   }
 
   .koncept_button a {
     text-decoration: none;
     color: var(--white);
-    font-size: var(--button-mobil);
+    font-size: var(--button-mobile);
     font-weight: var(--title-weight);
   }
   .kant_billede {
@@ -125,17 +150,63 @@ import "../css/custom.css";
     text-align: center;
     margin-top: 1rem;
     width: fit-content;
-    padding: var(--btn_padding-mobil);
+    padding: var(--btn_padding-mobile);
     background-color: var(--red);
     border-radius: 25px;
     height: fit-content;
   }
+  /* HERO */
 
-  @media (min-width: 800px) {
+  .hero {
+    position: relative;
+    height: max-content;
+  }
+  .hero_video {
+    display: block;
+    width: 100%;
+  }
+  .taeller {
+    position: absolute;
+
+    top: 1rem;
+    right: 16px;
+
+    z-index: 10;
+  }
+  .overskrift {
+    position: absolute;
+    bottom: 100px;
+    left: 26px;
+    z-index: 10;
+    text-align: left;
+    height: max-content;
+  }
+  .buttons {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 25px;
+  }
+  @media (min-width: 1024px) {
+    /* HERO */
     .hero {
-      height: 90%;
+      height: auto;
     }
-
+    .taeller {
+      right: 85px;
+      top: 35px;
+    }
+    .overskrift {
+      position: absolute;
+      top: 35px;
+      left: 85px;
+      z-index: 9999;
+      text-align: left;
+    }
+    .buttons {
+      position: relative;
+      z-index: 999;
+      bottom: 119px;
+    }
     .koncept_tekst h1 {
       font-size: var(--h1);
     }
@@ -180,6 +251,9 @@ import "../css/custom.css";
     }
     .koncept_button a {
       font-size: var(--button);
+    }
+    .koncept_button {
+      padding: var(--btn_padding);
     }
   }
 </style>

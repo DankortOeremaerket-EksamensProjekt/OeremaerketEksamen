@@ -64,43 +64,144 @@ Projektet er udviklet med:
 ```bash
 OEREMAERKETEKSAMEN/
 ├── public/
-│   ├── images/
-│   ├── icons/
-│   └── favicon.svg
-│
+│   ├── fonts/
+│   │   └── Raleway-VariableFont_wght.ttf
+│   ├── video/
+│   │   └── hero_index.mp4
+│   ├── favicon.svg
+│   └── DK_Logo_CMYK.svg
 ├── src/
 │   ├── assets/
-│   │
+│   │   ├── dk_mobil.svg
+│   │   ├── jumpdown.svg
+│   │   ├── kort.svg
+│   │   ├── mobil_step_baggrund.svg
+│   │   ├── shield_mobil.svg
+│   │   ├── shop_mobil.svg
+│   │   ├── sti_mobil.svg
+│   │   └── trees_mobil.svg
 │   ├── components/
-│   │   ├── Button.astro
-│   │   ├── Card.astro
+│   │   ├── Banner_read_more.astro
+│   │   ├── Buttons_nav.astro
+│   │   ├── Card_step.astro
+│   │   ├── Donation_taeller.astro
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
-│   │   ├── Hero.astro
-│   │   ├── Navigation.astro
-│   │   ├── Popup.astro
-│   │   └── TopBanner.astro
+│   │   ├── Hero_video.astro
+│   │   └── Icons.astro
+│   │
+│   ├── css/
+│   │   ├── custom.css
+│   │   └── general.css
+│   │
+│   ├── img/
+│   │   ├── groenne_strand/
+│   │   │   ├── groenne_strand_1.webp
+│   │   │   ├── groenne_strand_2.webp
+│   │   │   ├── groenne_strand_3.webp
+│   │   │   ├── groenne_strand_4.webp
+│   │   │   └── groenne_strand_5.webp
+│   │   │    
+│   │   ├── hals_mose/
+│   │   │   ├── hals_mose_1.webp
+│   │   │   ├── hals_mose_2.webp
+│   │   │   └── hals_mose_3.webp
+│   │   │   
+│   │   ├── hesbjerg_skov/
+│   │   │   ├── hesbjerg_skov_1.webp
+│   │   │   ├── hesbjerg_skov_2.webp
+│   │   │   ├── hesbjerg_skov_3.webp
+│   │   │   ├── hesbjerg_skov_4.webp
+│   │   │   ├── hesbjerg_skov_5.webp
+│   │   │   ├── hesbjerg_skov_6.webp
+│   │   │   └── hesbjerg_skov_7.webp
+│   │   │   
+│   │   ├── randkloeve_skaar/
+│   │   │   ├── randkloeve_skaar_1.webp
+│   │   │   ├── randkloeve_skaar_2.webp
+│   │   │   ├── randkloeve_skaar_3.webp
+│   │   │   ├── randkloeve_skaar_4.webp
+│   │   │   ├── randkloeve_skaar_5.webp
+│   │   │   ├── randkloeve_skaar_6.webp
+│   │   │   ├── randkloeve_skaar_7.webp
+│   │   │   ├── randkloeve_skaar_8.webp
+│   │   │   ├── randkloeve_skaar_9.webp
+│   │   │   ├── randkloeve_skaar_10.webp
+│   │   │   ├── randkloeve_skaar_11.webp
+│   │   │   ├── randkloeve_skaar_12.webp
+│   │   │   ├── randkloeve_skaar_13.webp
+│   │   │   ├── randkloeve_skaar_14.webp
+│   │   │   ├── randkloeve_skaar_15.webp
+│   │   │   ├── randkloeve_skaar_16.webp
+│   │   │   ├── randkloeve_skaar_17.webp
+│   │   │   ├── randkloeve_skaar_18.webp
+│   │   │   ├── randkloeve_skaar_19.webp
+│   │   │   └── randkloeve_skaar_10.webp
+│   │   │   
+│   │   ├── storebaelt_klint/
+│   │   │   ├── storebaelt_klint_1.webp
+│   │   │   ├── storebaelt_klint_2.webp
+│   │   │   ├── storebaelt_klint_3.webp
+│   │   │   ├── storebaelt_klint_4.webp
+│   │   │   ├── storebaelt_klint_5.webp
+│   │   │   ├── storebaelt_klint_6.webp
+│   │   │   ├── storebaelt_klint_7.webp
+│   │   │   └── storebaelt_klint_8.webp
+│   │   │
+│   │   ├── trelde_naes/
+│   │   │   ├── trelde_naes_1.webp
+│   │   │   ├── trelde_naes_2.webp
+│   │   │   ├── trelde_naes_3.webp
+│   │   │   ├── trelde_naes_4.webp
+│   │   │   ├── trelde_naes_5.webp
+│   │   │   ├── trelde_naes_6.webp
+│   │   │   ├── trelde_naes_7.webp
+│   │   │   └── trelde_naes_8.webp
+│   │   │
+│   │   ├── vejle_aadal/
+│   │   │   ├── vejle_aadal_1.webp
+│   │   │   ├── vejle_aadal_2.webp
+│   │   │   ├── vejle_aadal_3.webp
+│   │   │   ├── vejle_aadal_4.webp
+│   │   │   ├── vejle_aadal_5.webp
+│   │   │   ├── vejle_aadal_6.webp
+│   │   │   ├── vejle_aadal_7.webp
+│   │   │   ├── vejle_aadal_8.webp
+│   │   │   └── vejle_aadal_9.webp
+│   │   │
+│   │   ├── venoe/
+│   │   │   ├── venoe_1.webp
+│   │   │   ├── venoe_2.webp
+│   │   │   ├── venoe_3.webp
+│   │   │   └── venoe_4.webp
+│   │   │
+│   │   ├── card_desktop.svg
+│   │   ├── card_mobile.svg
+│   │   ├── clouds.webp
+│   │   ├── dankort_i_haand.webp
+│   │   ├── girls_piggybacking.webp
+│   │   ├── grassy_beach_sunset.webp
+│   │   ├── loevfro_naturfond.webp #ER DENNE TAGET AF JESPER?#
+│   │   ├── logon.webp
+│   │   ├── sandy_beach_coastline.webp
+│   │   ├── sandy_beach.webp
+│   │   ├── sky_clouds.webp
+│   │   ├── small_shop.webp
+│   │   ├── surfer_girl.webp
+│   │   └── udylf_detaljer.webp
 │   │
 │   ├── layouts/
 │   │   └── Layout.astro
 │   │
+│   ├── lib/
+│   │   └── supabase.js
+│   │
 │   ├── pages/
-│   │   ├── index.astro
-│   │   ├── donation.astro
-│   │   ├── om-os.astro
-│   │   └── [slug].astro
-│   │
-│   ├── styles/
-│   │   │── custom.css
-│   │   │── global.css
-│   │
-│   └── scripts/
-│
-├── astro.config.mjs
-├── package.json
-├── package-lock.json
-├── README.md
-└── tsconfig.json
+        ├── detail.astro
+        ├── index.astro
+        ├── spec.details.astro
+        └── stepbystep.astro
+
 ```
 
 ---

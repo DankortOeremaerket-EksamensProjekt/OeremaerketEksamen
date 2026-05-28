@@ -6,9 +6,9 @@ import Jumpdown from "../assets/jumpdown.svg";
 import Piggyback from "../img/girls_piggybacking.webp";
 import Smallshop from "../img/small_shop.webp";
 import Mobilsti from "../assets/sti_mobil.svg";
-import DankortIHand from "../img/dankort_i_haand.webp";
-import LogPaa from "../img/logon.webp";
-import Udfyld from "../img/udfyld_detaljer.webp";
+import DankortIHand from "../img/dankort_i_haand.svg";
+import LogPaa from "../img/logon.svg";
+import Udfyld from "../img/udfyld_detaljer.svg";
 ---
 
 <Layout>
@@ -40,7 +40,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
     <div class="step-wrapper">
       <div class="step_venstre" id="step_1">
         <div class="step_v_pic">
-          <img src={LogPaa.src} alt="" />
+          <img src={LogPaa.src} alt="" id="steps_imgs_border" />
         </div>
         <div class="step_v_tekst">
           <h2>STEP 1</h2>
@@ -52,7 +52,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
       </div>
       <div class="step_hoejre">
         <div class="step_h_pic" id="step_2">
-          <img src={Udfyld.src} alt="" />
+          <img src={Udfyld.src} alt="" id="steps_imgs_border" />
         </div>
         <div class="step_h_tekst">
           <h2>STEP 2</h2>
@@ -64,7 +64,7 @@ import Udfyld from "../img/udfyld_detaljer.webp";
       </div>
       <div class="step_venstre" id="step_3">
         <div class="step_v_pic">
-          <img src={DankortIHand.src} alt="" />
+          <img src={DankortIHand.src} alt="" id="steps_imgs_border" />
         </div>
         <div class="step_v_tekst">
           <h2>STEP 3</h2>
@@ -89,6 +89,11 @@ import Udfyld from "../img/udfyld_detaljer.webp";
 </script>
 
 <style>
+  #steps_imgs_border {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--light-grey);
+  }
   .step_2_1 {
     display: grid;
     grid-template-columns: 1fr 120px;
@@ -147,13 +152,13 @@ import Udfyld from "../img/udfyld_detaljer.webp";
   .step_venstre {
     display: flex;
     flex-direction: row;
-    transform: translateX(-4rem);
+    /* transform: translateX(-4rem); */
   }
   .step_hoejre {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    transform: translateX(4rem);
+    /* transform: translateX(4rem); */
   }
   .step_v_pic img,
   .step_h_pic img {

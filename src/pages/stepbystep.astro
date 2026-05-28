@@ -31,7 +31,9 @@ import Udfyld from "../img/udfyld_detaljer.svg";
       <img src={Piggyback.src} alt="" class="step_pic" id="mobil_billed" />
     </div>
   </div>
+  <div class="buttons">
   <Buttons />
+ </div>
   <img src={Mobilsti.src} alt="" class="mobil_sti" />
   <div class="step_by_step_title" id="steps">
     <h1>3 nemme steps til Dankort</h1>
@@ -283,4 +285,25 @@ import Udfyld from "../img/udfyld_detaljer.svg";
       top: 28vh;
     }
   }
+    /* FUNKTIONER */
+.buttons.fixed{
+  position: fixed;
+  top: 0;
+  left: 295px;
+  z-index: 1000;
+}
 </style>
+
+<script>
+  const buttons = document.querySelector('.buttons') as HTMLElement;
+
+  const startPosition = buttons.offsetTop;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > startPosition) {
+      buttons.classList.add('fixed');
+    } else {
+      buttons.classList.remove('fixed');
+    }
+  });
+</script>

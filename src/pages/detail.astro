@@ -37,8 +37,9 @@ console.log("Error:", error);
   </div>
 
 </section> 
-
-
+<div class="buttons">
+<Buttons />
+</div>
 
 
        <!-- HERO BILLEDE OG TEKST, DESKTOP-->
@@ -281,7 +282,14 @@ console.log("Error:", error);
     width: 100%;
     margin: 0;
   }
-
+/* BUTTONS */
+.buttons{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
   /* DESKTOP */
 
   @media (min-width: 1024px) {
@@ -428,5 +436,13 @@ console.log("Error:", error);
       width: 18px;
       height: 18px;
     }
-  }
+  
+.buttons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
 </style>

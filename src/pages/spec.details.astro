@@ -15,8 +15,9 @@ import Banner from "../components/Banner_read_more.astro";
     <img src="/src/img/sandy_beach.webp" alt="" class="img_mobile-1"> 
 </div>
 
- <Buttons />
-
+<div class="buttons">
+  <Buttons />
+</div>
 <!--  Julie indsætter Superbase elementer --> 
 
 
@@ -101,7 +102,18 @@ p {
 }
 
 
+/* BUTTONS */
+.buttons{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
 
+body {
+  min-height: 200vh;
+}
 
 
   /* DESKTOP 1024PX*/
@@ -180,7 +192,13 @@ h1 {
     z-index: 2;
     display: block;
   }
-
-}
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+}}
 
 </style>

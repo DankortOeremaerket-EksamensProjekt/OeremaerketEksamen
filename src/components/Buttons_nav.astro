@@ -4,9 +4,10 @@ import "../css/custom.css";
 
 <div class="nav_btns">
   <a href="/" class="nav-link">Vores koncept</a>
-  <a href="/detail" class="nav-link">Udforsk områderne</a>
+  <a href="/detail" class="nav-link active">Udforsk områderne</a>
   <a href="/stepbystep" class="nav-link">Dankort i 3 trin</a>
 </div>
+
 
 <style>
   /* MOBILE FIRST */
@@ -36,6 +37,13 @@ import "../css/custom.css";
       inset -1px 2px 5px var(--lightest-grey),
       inset -1px 2px 2px var(--grey);
   }
+
+  /* Active state – skal sættes på den side, man er på */
+.nav-link.active {
+  background: #4a4a4a;
+  color: white;
+}
+
 
   /* DESKTOP 1024PX */
 

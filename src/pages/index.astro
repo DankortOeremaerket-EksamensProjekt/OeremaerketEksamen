@@ -5,7 +5,7 @@ import skyerbred from "../img/sky_clouds.webp";
 import surfer from "../img/surfer_girl.webp";
 import Icons from "../components/Icons.astro";
 import HeroVideo from "../components/Hero_video.astro";
-import DonationTaeller from "../components/Donation_taeller.astro"
+import DonationTaeller from "../components/Donation_taeller.astro";
 import ButtonsNav from "../components/Buttons_nav.astro";
 import "../css/custom.css";
 import Banner from "../components/Card_step.astro";
@@ -14,14 +14,14 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
 
 <Layout>
   <section class="hero">
-  <HeroVideo />
-  <div class="taeller">
- <DonationTaeller />
- </div>
- <div class="overskrift">
- <OverskriftHeroIndex />
-</div>
-</section>
+    <HeroVideo />
+    <div class="taeller">
+      <DonationTaeller />
+    </div>
+    <div class="overskrift">
+      <OverskriftHeroIndex />
+    </div>
+  </section>
   <ButtonsNav />
   <Icons />
   <div class="koncept_1_1">
@@ -89,6 +89,9 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
     height: 230px;
     overflow: hidden;
   }
+  .koncept_button:hover {
+    filter: grayscale(30%);
+  }
 
   .koncept_tekst h1 {
     font-size: var(--h1-mobile);
@@ -139,45 +142,44 @@ import OverskriftHeroIndex from "../components/Overskrift_hero_index.astro";
     border-radius: 25px;
     height: fit-content;
   }
-    /* HERO */
-     
-    .hero {
+  /* HERO */
+
+  .hero {
     position: relative;
-   
   }
-    .hero_video{
-      display: block;
-   width: 100%;
-    }
-    .taeller{
+  .hero_video {
+    display: block;
+    width: 100%;
+  }
+  .taeller {
     position: absolute;
 
-  top: 1rem;
-  right: 16px;
+    top: 1rem;
+    right: 16px;
 
-  z-index: 10;
-    }
-    .overskrift{
-      position: absolute;
-      bottom:20px;
-      left:26px;
-      z-index: 10;
-      text-align: left;
-    }
+    z-index: 10;
+  }
+  .overskrift {
+    position: absolute;
+    bottom: 20px;
+    left: 26px;
+    z-index: 10;
+    text-align: left;
+  }
 
   @media (min-width: 1024px) {
     /* HERO */
     .hero {
       height: 90%;
     }
-    .taeller{
-      right:85px;
-      top:35px;
+    .taeller {
+      right: 85px;
+      top: 35px;
     }
-     .overskrift{
+    .overskrift {
       position: absolute;
-      top:35px;
-      left:85px;
+      top: 35px;
+      left: 85px;
       z-index: 10;
       text-align: left;
     }

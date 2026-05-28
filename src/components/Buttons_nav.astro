@@ -12,14 +12,15 @@ import "../css/custom.css";
 <style>
   /* MOBILE FIRST */
 
-  .nav_btns {
-    top: 0;
-    position: sticky;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
+  .nav_btns{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  white-space: nowrap;
+}
 
   .nav-link {
     background-color: var(--buttons-grey);
@@ -71,4 +72,36 @@ import "../css/custom.css";
       color: white;
     }
   }
+  /* FUNKTION */
+  .nav_btns.fixed{
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+    white-space: nowrap;
+}
 </style>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+
+  if (window.innerWidth < 1024) return;
+
+  const nav = document.querySelector('.nav_btns');
+
+  if (!nav) return;
+
+  const triggerTop = nav.getBoundingClientRect().top + window.scrollY;
+
+  window.addEventListener('scroll', () => {
+
+    if (window.scrollY >= triggerTop) {
+      nav.classList.add('fixed');
+    } else {
+      nav.classList.remove('fixed');
+    }
+
+  });
+
+});
+</script>

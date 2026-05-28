@@ -213,14 +213,31 @@ Projektet henter dynamisk indhold fra Supabase i JSON-format.
 
 ```javascript
 {
- xxx
+  "id": 1,
+  "navn": "Storebælt Klint",
+  "undertitel": "Forenet med naturen",
+  "beskrivelse": "Hver gang du bruger dit Dankort, donerer vi 1 øre til Den Danske Naturfond...",
+  "billede_url": "https://xxxx.supabase.co/storage/v1/object/public/billeder/storebaelt1.webp",
+  "billede_url_2": "https://xxxx.supabase.co/storage/v1/object/public/billeder/storebaelt2.webp",
+  "billede_url_3": "https://xxxx.supabase.co/storage/v1/object/public/billeder/storebaelt3.webp",
+  "pin_x": 65.05,
+  "pin_y": 74.32,
+  "slug": "storebaelt_klint"
 }
 ```
 
 ## Felter vi bruger
 
 ```javascript
-xxx
+navn        // Navn på naturområdet — vises som overskrift
+undertitel  // Kort undertitel — vises på card og detaljeside
+beskrivelse // Længere beskrivelse af naturområdet
+billede_url  // URL til primært billede
+billede_url_2 // URL til sekundært billede
+billede_url_3 // URL til tertiært billede
+pin_x       // Kortets X-koordinat i procent (bruges til placering af pin på Danmarkskortet)
+pin_y       // Kortets Y-koordinat i procent (bruges til placering af pin på Danmarkskortet)
+slug        // URL-venligt navn til dynamisk routing fx /productlist/storebaelt_klint
 ```
 
 ---

@@ -88,7 +88,8 @@ OEREMAERKETEKSAMEN/
 │   │   ├── Footer.astro
 │   │   ├── Header.astro
 │   │   ├── Hero_video.astro
-│   │   └── Icons.astro
+│   │   ├── Icons.astro
+│   │   └── Overskrift_hero_index
 │   │
 │   ├── css/
 │   │   ├── custom.css

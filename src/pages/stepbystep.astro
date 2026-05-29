@@ -140,6 +140,10 @@ import Udfyld from "../img/udfyld_detaljer.svg";
     cursor: pointer;
     filter: grayscale(30%);
   }
+  .jump_down_button {
+    width: 2rem;
+    margin-top: 1.5rem;
+  }
 
   /*step-by-step*/
   .step_by_step {
@@ -189,7 +193,8 @@ import Udfyld from "../img/udfyld_detaljer.svg";
     height: 48rem;
     left: 50%;
     transform: translateX(-50%);
-    top: 86vh;
+    top: 70vh;
+    z-index: -1;
   }
   .step_by_step_title {
     text-align: center;
@@ -198,7 +203,7 @@ import Udfyld from "../img/udfyld_detaljer.svg";
 
   @media (min-width: 768px) {
     .mobil_sti {
-      top: 60vh;
+      top: 70vh;
     }
   }
 
@@ -272,19 +277,19 @@ import Udfyld from "../img/udfyld_detaljer.svg";
     }
     .mobil_sti {
       height: 75rem;
-      top: 70vh;
+      top: 80vh;
     }
   }
   @media (min-width: 1400px) {
     .mobil_sti {
       height: 80rem;
-      top: 55vh;
+      top: 65vh;
     }
   }
   @media (min-width: 2500px) {
     .mobil_sti {
       height: 75rem;
-      top: 28vh;
+      top: 38vh;
     }
   }
   /* FUNKTIONER */
